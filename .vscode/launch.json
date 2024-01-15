@@ -1,0 +1,29 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Blog generator with Arguments",
+            "type": "debugpy",
+            "python": "/usr/bin/docker",
+            "pythonArgs": [ 
+                "compose", 
+                "-f", "bin/generator/compose.yaml",
+                "run", "--rm", "app",
+                "python"
+            ],
+            "request": "launch",
+            "program": "/app/generate-post.py",
+            "console": "integratedTerminal",
+            "args": "rust-is-great",
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}/bin/generator",
+                    "remoteRoot": "/app"
+                }
+            ]
+        }
+    ]
+}

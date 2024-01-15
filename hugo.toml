@@ -1,0 +1,84 @@
+baseURL = 'https://blog.0x29a.me/'
+
+languageCode = 'en'
+
+title = '0x29a.me'
+
+theme = ["github.com/adityatelange/hugo-PaperMod"]
+
+sectionPagesMenu = 'main'
+
+enableEmoji = true
+enableRobotsTXT = true
+
+[outputs]
+	home = ["html", "rss", "json"]
+
+[params]
+	showBreadCrumbs = true
+
+	disallowAll = true
+
+	defaultTheme = 'dark'
+	disableThemeToggle = true
+
+	author = 'christian frantzen'
+	description = 'christian frantzen - a software developer'
+
+	[params.assets]
+		favicon	= 'favicon.ico'
+
+	[params.label]
+		text = "blog"
+		icon = "https://blog.0x29a.me/favicon-32x32.png"
+
+	[params.profileMode]
+		enabled = true
+
+		title = "Christian Frantzen"
+		subtitle = "a software developer"
+
+		imageUrl = "https://fs.0x29a.me/static/pp-small.webp"
+		imageTitle = "profile picture"
+
+		[[params.profileMode.buttons]]
+			name = 'about'
+			url = '/about'
+		[[params.profileMode.buttons]]
+			name = 'posts'
+			url = '/posts'
+
+	[[params.socialIcons]]
+		name = "github"
+		url = "https://github.com/Cephra"
+	[[params.socialIcons]]
+		name = "twitter"
+		url = "https://x.com/Unknown4283428"
+	[[params.socialIcons]]
+		name = "email"
+		url = "mailto:cf@0x29a.me"
+	[[params.socialIcons]]
+		name = "rss"
+		url = "/index.xml"
+
+	[params.editPost]
+		URL = 'https://github.com/Cephra/blog/edit/main/content'
+		Text = 'edit'
+		appendFilePath = true
+
+	[params.footer]
+		text = "[privacy](/privacy)"
+
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.twitter]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = true

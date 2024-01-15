@@ -1,0 +1,21 @@
+baseURL = 'https://blog.0x29a.me/'
+languageCode = 'en-us'
+title = '0x29a.me'
+theme = ["github.com/adityatelange/hugo-PaperMod"]
+sectionPagesMenu = 'main'
+enableEmoji = true
+
+[params]
+	showBreadCrumbs = true
+	defaultTheme = 'dark'
+	disableThemeToggle = true
+	[params.profileMode]
+		enabled = true
+		title = "Christian Frantzen"
+		subtitle = "a software developer"
+	[[params.socialIcons]]
+		name = "github"
+		url = "https://github.com/Cephra"
+	[[params.socialIcons]]
+		name = "email"
+		url = "mailto:cf@0x29a.me"

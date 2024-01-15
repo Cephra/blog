@@ -1,0 +1,12 @@
+services:
+  app:
+    user: 1000:1000
+    build:
+      context: .
+    volumes:
+      - ./:/app
+      - ../../:/app/mnt-workspace
+      - /opt/venv
+      - $HOME/.vscode-oss:$HOME/.vscode-oss
+    network_mode: host
+    command: python test.py

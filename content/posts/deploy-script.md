@@ -1,7 +1,6 @@
 +++
 title = 'Deploy Script'
 date = 2024-01-16T22:05:00+01:00
-draft = true
 +++
 
 In case you're wondering how I set up the deploy.sh:

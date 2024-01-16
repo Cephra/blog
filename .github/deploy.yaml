@@ -7,13 +7,13 @@ on:
 
 jobs:
   build:
-  name: Build & Deploy on server
-    runs-on: ubuntu-latest
-    steps:
-    - name: executing remote ssh commands using key
-      uses: appleboy/ssh-action@v1.0.3
-      with:
-        host: ${{ secrets.REMOTE_SERVER_HOST }}
-        username: ${{ secrets.REMOTE_SERVER_USERNAME }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        script: ./blog/deploy.sh
+    name: Build & Deploy on server
+      runs-on: ubuntu-latest
+      steps:
+      - name: executing remote ssh commands using key
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.REMOTE_SERVER_HOST }}
+          username: ${{ secrets.REMOTE_SERVER_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: ./blog/deploy.sh

@@ -13,6 +13,9 @@ enableEmoji = true
 		enabled = true
 		title = "Christian Frantzen"
 		subtitle = "a software developer"
+		[[params.profileMode.buttons]]
+			name = 'posts'
+			url = '/posts'
 	[[params.socialIcons]]
 		name = "github"
 		url = "https://github.com/Cephra"

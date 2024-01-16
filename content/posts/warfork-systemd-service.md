@@ -20,3 +20,8 @@ WantedBy=multi-user.target
 ```
 
 PS: I also host a warfork server. Same domain. :smile:
+
+To quickly connect to it using the in-game console:
+```
+connect 0x29a.me
+```

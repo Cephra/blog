@@ -25,6 +25,11 @@ enableRobotsTXT = true
 
 	[params.assets]
 		favicon	= 'favicon.ico'
+	author = 'christian frantzen'
+	description = 'christian frantzen - a software developer'
+
+	[params.footer]
+		text = "[privacy](/privacy)"
 
 	[params.label]
 		text = "blog"

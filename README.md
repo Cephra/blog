@@ -1,1 +1,1 @@
-The source for [https://blog.0x29a.me/]
+The source for https://blog.0x29a.me/

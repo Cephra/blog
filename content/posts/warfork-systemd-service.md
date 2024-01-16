@@ -18,3 +18,5 @@ ExecStop=/usr/bin/tmux kill-server
 [Install]
 WantedBy=multi-user.target
 ```
+
+PS: I also host a warfork server. Same domain. :smile:

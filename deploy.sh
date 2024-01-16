@@ -9,4 +9,4 @@ git pull
 # build it
 hugo --minify
 # copy it
-cp -r public/* /srv/http/0x29a.me/blog/
+cp -r public/* /srv/http/blog/

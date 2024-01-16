@@ -10,6 +10,7 @@ Description=Warfork Server
 [Service]
 Type=forking
 User=steam
+Group=steam
 Restart=always
 ExecStart=/home/steam/start_server.sh
 ExecStop=/usr/bin/tmux kill-server

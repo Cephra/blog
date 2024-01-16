@@ -1,5 +1,5 @@
 +++
-title = 'Warfork Systemd Service'
+title = 'Warfork Server'
 date = 2024-01-16T22:13:02+01:00
 +++
 So recently I've set up a [warfork](https://warfork.com/) server. Warfork is FOSS and a fast-paced quake-like arena shooter.

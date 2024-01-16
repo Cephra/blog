@@ -3,7 +3,7 @@
 # ensure project root
 cd "$(dirname "$0")"
 # clean old
-rm -rf /srv/http/0x29a.me/blog/*
+rm -rf /srv/http/blog/*
 # fetch new
 git pull
 # build it

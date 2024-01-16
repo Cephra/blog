@@ -17,3 +17,5 @@ And still no success, but I think I've fixed it.
 No still nothing...
 
 Oh wow.. so many little mistakes :D
+
+I finally managed to fix it! Yay!

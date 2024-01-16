@@ -11,7 +11,7 @@ Welcome to my blog where I post about things,
 that I'm either
 - currently working on
 - have worked on in the past
-- or just interested in.
+- or just interested in
 
 Things I'm interested in:
 * Web Development

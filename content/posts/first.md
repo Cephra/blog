@@ -8,7 +8,7 @@ If everything went well, this should be automatically deployed to my blog!
 
 Let's see...
 
-Ok it doesn't work via GitHub Actions because I don't have an IPv4 adress.
+Ok it doesn't work via GitHub Actions because I don't have an IPv4 address.
 
 Now I switched to using a webhook instead.
 

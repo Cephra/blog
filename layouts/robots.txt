@@ -1,0 +1,8 @@
+User-agent: *
+{{ range .Pages }}
+{{ if .Param "index" -}}
+Allow: {{ .RelPermalink }}
+{{- else -}}
+Disallow: {{ .RelPermalink }}
+{{- end -}}
+{{ end }}

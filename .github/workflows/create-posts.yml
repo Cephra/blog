@@ -1,0 +1,16 @@
+name: Auto-create new posts for branches in posts/
+
+on:
+    push:
+        branches:
+        - 'posts/**'
+    
+jobs:
+    create-tag:
+        if: github.event.created
+        runs-on: ubuntu-latest
+        steps:
+            -
+                name: Checkout repository
+                uses: actions/checkout@v4
+ 

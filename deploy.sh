@@ -8,7 +8,5 @@ git pull
 # build it
 hugo --minify
 
-# clean old
-rm -rf /srv/http/blog/*
-# copy it
-cp -r public/* /srv/http/blog/
+# sync public folder
+rsync -av --delete public/ /srv/http/blog/

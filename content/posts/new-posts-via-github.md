@@ -1,7 +1,6 @@
 +++
-title = 'New Posts via Github'
+title = 'New Posts via GitHub'
 date = 2024-01-17T10:33:41Z
-draft = true
 +++
 
 I've just added a new GitHub Workflow allowing me to quickly create

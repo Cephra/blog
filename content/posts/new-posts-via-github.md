@@ -48,7 +48,7 @@ jobs:
                 run: |
                     git config --local user.email "github-actions[bot]@users.noreply.github.com"
                     git config --local user.name "github-actions[bot]"
-                    git add posts/
+                    git add content/
                     git commit -m "added new post"
             -
                 name: Push changes

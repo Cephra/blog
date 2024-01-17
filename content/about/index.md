@@ -5,7 +5,9 @@ menus = 'main'
 
 Hi :wave:,
 
-my name is Christian Frantzen, a passionate software developer born 1994. I am based in Germany and have more than 8 years of professional experience as well as a long history of recreational programming.
+my name is Christian Frantzen, a passionate software developer born 1994.
+
+I am based in Germany and have more than 8 years of professional experience as well as a long history of recreational programming.
 
 Welcome to my blog where I post about things, 
 that I'm either

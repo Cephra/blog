@@ -9,8 +9,6 @@ new posts by creating a new branch within the "posts/" directory.
 Once that branch is created, the workflow runs a hugo command adding a new content file template.
 All I have to do after that is edit the file in the branch and then I can commit it.
 
-```yaml
-{{< fileinclude "../../.github/workflows/create-posts.yml" >}}
-```
+{{< codeinclude "yaml" ".github/workflows/create-post.yml" >}}
 
 When I'm done, all I have to do is push the branch in main and the webhook will take care of publishing the changes.

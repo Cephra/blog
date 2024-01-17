@@ -1,0 +1,2 @@
+{{ $file := .Get 1 | readFile }}
+{{- highlight $file (.Get 0) -}}

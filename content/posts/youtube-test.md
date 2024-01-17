@@ -5,4 +5,4 @@ date = 2024-01-17T12:11:22Z
 
 Just a quick test of embedding youtube videos:
 
-{{< youtube ZYHO7BGiH54 >}}
+{{< youtube dQw4w9WgXcQ >}}

@@ -5,6 +5,9 @@ theme = ["github.com/adityatelange/hugo-PaperMod"]
 sectionPagesMenu = 'main'
 enableEmoji = true
 
+[outputs]
+	home = ["html", "rss", "json"]
+
 [params]
 	showBreadCrumbs = true
 	defaultTheme = 'dark'

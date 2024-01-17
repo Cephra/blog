@@ -38,6 +38,9 @@ jobs:
                 with:
                     hugo-version: '0.121.2'
             -
+                name: Workaround for Go version mismatch
+                run: sed -i -e 's/1.21.5/1.23/g' go.mod
+            -
                 name: Create post
                 run: hugo new content posts/${{ steps.extract_branch.outputs.branch }}.md
             - 
@@ -45,7 +48,7 @@ jobs:
                 run: |
                     git config --local user.email "github-actions[bot]@users.noreply.github.com"
                     git config --local user.name "github-actions[bot]"
-                    git add .
+                    git add posts/
                     git commit -m "added new post"
             -
                 name: Push changes

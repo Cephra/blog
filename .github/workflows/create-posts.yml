@@ -23,6 +23,8 @@ jobs:
             -   
                 name: Setup Hugo
                 uses: peaceiris/actions-hugo@v2
+                with:
+                    hugo-version: '0.121.2'
             -
                 name: Create post
                 run: hugo new content posts/${{ steps.extract_branch.outputs.branch }}.md

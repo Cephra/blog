@@ -3,7 +3,7 @@ name: Auto-create new posts for branches in posts/
 on:
     push:
         branches:
-        - 'posts/**'
+            - 'posts/**'
 
 permissions: 
     contents: write

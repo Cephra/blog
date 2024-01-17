@@ -4,6 +4,9 @@ on:
     push:
         branches:
         - 'posts/**'
+
+permissions: 
+    contents: write
     
 jobs:
     create-tag:
@@ -13,4 +16,25 @@ jobs:
             -
                 name: Checkout repository
                 uses: actions/checkout@v4
- 
+            -
+                name: Extract branch name
+                id: extract_branch
+                run: echo "::set-output name=branch::$(echo ${GITHUB_REF#refs/heads/posts/})"
+            -   
+                name: Setup Hugo
+                uses: peaceiris/actions-hugo@v2
+            -
+                name: Create post
+                run: hugo new content posts/${{ steps.extract_branch.outputs.branch }}.md
+            - 
+                name: Commit new post file
+                run: |
+                    git config --local user.email "github-actions[bot]@users.noreply.github.com"
+                    git config --local user.name "github-actions[bot]"
+                    git commit -a -m "added new post"
+            -
+                name: Push changes
+                uses: ad-m/github-push-action@master
+                with:
+                    github_token: ${{ secrets.GITHUB_TOKEN }}
+                    branch: ${{ github.ref }}

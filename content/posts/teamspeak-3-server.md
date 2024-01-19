@@ -6,9 +6,7 @@ summary = 'We have a Teamspeak 3 Server!'
 
 # We have a Teamspeak 3 Server!
 
-We, that is, my friends and I, play video games together.
-
-Like Warsow for example. 
+We, that is, my friends and I, who play video games together.
 
 And that's why I decided I might as well host a teamspeak 3 server. :smile:
 

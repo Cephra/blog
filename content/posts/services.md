@@ -2,7 +2,6 @@
 title = 'Services'
 summary = 'Short link list of all running services'
 date = 2024-01-20T14:22:18Z
-draft = true
 +++
 
 - [Main](https://www.0x29a.me/)

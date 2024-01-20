@@ -12,6 +12,8 @@ enableEmoji = true
 	showBreadCrumbs = true
 	defaultTheme = 'dark'
 	disableThemeToggle = true
+	[params.assets]
+		favicon	= 'favicon.ico'
 	[params.profileMode]
 		enabled = true
 		title = "Christian Frantzen"

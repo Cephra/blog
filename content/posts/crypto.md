@@ -2,6 +2,7 @@
 title = 'My public GPG key'
 summary = 'if you want to send some encrypted e-mail!'
 date = 2024-02-06T22:09:03Z
+showCodeCopyButtons = true
 +++
 
 ```

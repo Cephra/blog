@@ -17,6 +17,7 @@ that I'm either
 
 Things I'm interested in:
 * Web Development
+* AI
 * GNU/Linux
 * Optimization
 * and more...

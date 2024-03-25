@@ -17,5 +17,8 @@ ollama run gemma "\
 Write a blog post based on the following text. Ignore everything between the first two lines reading \"+++\".\
 $(cat $POSTFILE) $input_text \
 " >> content/posts/$1.md
-$DESCRIPTION=ollama run gemma "Generate a short description of the following blog post. Keep it short and concise. Here's the post: $(cat $POSTFILE)"
+$DESCRIPTION=$(
+    ollama run gemma "Generate a short description of the following blog post. \ 
+    Keep it short and concise. Here's the post: \"$(cat $POSTFILE)\""
+)
 sed -i "s/+++$/summary = $DESCRIPTION&/" $POSTFILE

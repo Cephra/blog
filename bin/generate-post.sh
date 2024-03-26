@@ -12,33 +12,35 @@ read input_text
 # Create a new posts based on the first parameter
 hugo new content $POST
 
-POSTCONTENT=$(cat $POSTFILE)
+# Read post
+POSTHEADER=$(pcregrep -M '^\+\+\+$(\n|.)*^\+\+\+$' $POSTFILE)
+POSTHEADER_STRIPPED=$(echo "$POSTHEADER" | sed '1d;$d')
+POSTHEADER_LINES=$(echo $(echo "$POSTHEADER" | wc -l)+1 | bc)
+POSTCONTENT=$(cat "$POSTFILE" | tail -n +$POSTHEADER_LINES)
 
 # Pipe the input text to ollama run gemma command and append it to blog post
-ollama run gemma <<EOF | cat <(echo) - >> $POSTFILE
-You are supposed to write a blog post based on input.
-The file currently has the following content:
-"$POSTCONTENT"
-Ignore everything inbetween the +++
-Please continue the blog post based on the following input:
-"$input_text"
-EOF
-
-POSTCONTENT=$(cat $POSTFILE)
-ollama run gemma <<EOF
-Write a short description of a blog post.
+ollama run gemma <<EOF >> $POSTFILE
+Either create or extend a blog post based on input.
 The blog post currently has the following content:
 "$POSTCONTENT"
-Ignore everything inbetween the +++.
+Continue the blog post based on the following input:
+"$input_text"
+Include everything that was in the post before.
 EOF
 
-#
-#DESCRPROMPT="Generate a short description of the following blog post.
-#Keep it short and concise. Here's the post: \"$(cat $POSTFILE)\""
-#echo $DESCRPROMPT
-#DESCRIPTION=$(
-#    ollama run gemma "$DESCRPROMPT"
-#)
-#echo $DESCRIPTION
-##sed -i "s/+++$/summary = $DESCRIPTION&/" $POSTFILE
-#
+POSTCONTENT=$(cat "$POSTFILE" | tail -n +$POSTHEADER_LINES)
+POSTDESCRIPTION=$(ollama run gemma <<EOF
+In first person, write a summary, as short as possible, about this blog post:
+"$POSTCONTENT"
+Output the summary like this:
+summary = "[summary sentences here]"
+EOF
+)
+
+cat <<EOF > $POSTFILE
++++
+$POSTHEADER_STRIPPED
+$POSTDESCRIPTION
++++
+$POSTCONTENT
+EOF

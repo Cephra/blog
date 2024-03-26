@@ -14,13 +14,33 @@ function read_post()  {
     POSTCONTENT=$(cat "$POSTFILE" | tail -n +$POSTHEADER_LINES)
 }
 
+function write_post_header() {
+    cat <<EOF > $POSTFILE
++++
+$POSTHEADER_STRIPPED
+$POSTDESCRIPTION
++++
+EOF
+}
+
+function write_post() {
+    cat <<EOF >> $POSTFILE
+$POSTCONTENT
+EOF
+}
+
+echo -n "Enter the keywords to generate the post with: "
 # Read input text from the user
 read input_text
 
 # Create a new posts based on the first parameter
 hugo new content $POST
 
+# Read the created post
 read_post
+
+# Write header
+write_post_header
 
 # Pipe the input text to ollama run gemma command and append it to blog post
 ollama run gemma <<EOF >> $POSTFILE
@@ -43,11 +63,5 @@ summary = "[summary sentences here]"
 EOF
 )
 
-# Reassemble the post
-cat <<EOF > $POSTFILE
-+++
-$POSTHEADER_STRIPPED
-$POSTDESCRIPTION
-+++
-$POSTCONTENT
-EOF
+write_post_header
+write_post

@@ -1,6 +1,5 @@
 +++
 title = 'about'
-menus = 'main'
 +++
 
 Hi :wave:,

@@ -16,8 +16,8 @@ So, let's continue this journey together. I'm here to help you explore the possi
 
 #### Author's NOTE
 
-The source for generating this looks as follows:
-*NOTE:* It's still a work in progress as of now :wink:
+The source for generating this looks as follows: \
+*It's still a work in progress as of now :wink:*
 
 {{< codeinclude "bash" "bin/generate-post.sh" >}}
 

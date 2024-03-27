@@ -9,7 +9,7 @@ Hi,
 
 I am pleased to announce the completion of my first application in Rust. The experience has been incredibly gratifying, and I'm already impressed by the elegance and simplicity of the language.
 
-Rust evokes a unique blend of TypeScript and C++, offering the perfect balance of power and ease of use. For instance, the ability to write concise and expressive code without sacrificing performance is a testament to the language's design.
+Rust seems like a unique blend of languages like TypeScript or C++, offering the perfect balance of power, efficiency and ease of use. For instance, the ability to write concise and expressive code without sacrificing performance is a testament to the language's design.
 
 One particular aspect that I find particularly compelling is the zero-cost abstractions provided by Rust. These abstractions eliminate the need for unnecessary layers of abstraction, resulting in more concise and efficient code.
 

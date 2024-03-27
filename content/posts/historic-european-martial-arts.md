@@ -2,6 +2,7 @@
 title = 'Historic European Martial Arts'
 date = 2024-03-27T21:47:30+01:00
 draft = false
+author = 'ai generated'
 summary = "Historical martial arts have been an integral part of human history, safeguarding nations and shaping warriors. Witnessing a friend's passion for historical European martial arts, you are captivated by the blend of athleticism, history, and cultural heritage. The rhythmic flow of strikes, kicks, and blocks is a testament to human resilience and agility. The study of historical martial arts unlocks a portal to the past, unveiling stories of warriors and the evolution of combat styles. It's also inspiring to see young people take an interest in historical martial arts, preserving the legacy of the past and paving the way for future generations."
 +++
 ## The Intrigue of Historical Martial Arts: A Journey Through Time with a Friend

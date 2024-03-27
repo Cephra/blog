@@ -2,8 +2,8 @@
 title = 'Rust is great'
 date = 2024-01-25T00:07:22Z
 summary = "I have completed my first application in Rust and I'm impressed by its elegance and simplicity. Rust offers a balance of power and ease of use, similar to TypeScript and C++."
-+++
 
++++
 
 Hi,
 
@@ -20,8 +20,9 @@ fn main() {
 }
 ```
 
-This simple code demonstrates the ease of use and expressiveness of Rust. It's concise, clear, and efficient.
+This simple code demonstrates the ease of use and expressiveness of Rust. It's concise, clear, and efficient. Compared to a language like Java, Rust has much less boilerplate and is much less verbose.
 
 I'm eager to delve deeper into the intricacies of Rust and explore its capabilities further. I'll make sure to keep you updated on my progress and share my experiences in future posts.
 
 Thank you for your time and interest. :smile:
+

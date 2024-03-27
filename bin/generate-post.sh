@@ -30,7 +30,7 @@ $POSTCONTENT
 EOF
 }
 
-echo -n "Enter the keywords to generate the post with: "
+echo -n "Enter the keywords to generate or extend the post with: "
 # Read input text from the user
 read input_text
 
@@ -48,7 +48,7 @@ ollama run gemma <<EOF >> $POSTFILE
 Either create or extend a blog post based on input.
 The blog post currently has the following content:
 "$POSTCONTENT"
-Continue the blog post based on the following input:
+Modify or extend the blog post based on the following input:
 "$input_text"
 Include everything that was in the post before.
 EOF

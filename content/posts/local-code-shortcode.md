@@ -4,7 +4,7 @@ date = 2024-01-17T13:17:56+01:00
 summary = 'Short post about how I solved showing codefiles from the project root'
 +++
 
-I've created a Hugo Shortcode to be able to include code files from this project.
+I've created a HUGO Shortcode to be able to include code files from this project.
 
 {{< codeinclude "go-html-template" "layouts/shortcodes/codeinclude.html" >}}
 

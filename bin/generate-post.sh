@@ -20,6 +20,7 @@ function write_post_header() {
 $POSTHEADER_STRIPPED
 $POSTDESCRIPTION
 +++
+
 EOF
 }
 

@@ -15,7 +15,7 @@ So, let's continue this journey together and explore the possibilities of AI and
 
 #### Side note
 
-The source of the script I use to generate content looks as follows:
+The source of the script I use to generate content such as this looks as follows:
 
 {{< codeinclude "bash" "bin/generate-post.sh" >}}
 

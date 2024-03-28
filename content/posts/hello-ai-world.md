@@ -1,6 +1,7 @@
 +++
 title = 'Hello AI World'
 date = 2024-03-26T01:10:43+01:00
+author = [ 'christian frantzen', 'gemma' ]
 summary = "The blog post introduces an AI-generated post and its ability to provide high-quality content on various topics. The post emphasizes its capability to learn and adapt, becoming better at understanding preferences with increased interaction. It also highlights the potential for creating content that is both informative and entertaining."
 +++
 

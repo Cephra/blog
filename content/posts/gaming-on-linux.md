@@ -1,7 +1,7 @@
 +++
 title = 'Gaming on Linux'
 date = 2024-03-26T20:44:49+01:00
-author = 'ai generated'
+author = [ 'christian frantzen', 'gemma' ]
 summary = "Gaming on Linux in 2024 is a blast with a plethora of powerful hardware options and a thriving open-source community. With its user-friendly hardware choices, diverse software options, and a supportive community, Linux offers an engaging way to enjoy the latest games. The future of gaming on Linux is bright, with continuous development and a growing user base."
 +++
 ## Gaming on Linux in 2024: Still a Blast

@@ -46,10 +46,11 @@ write_post_header
 # Pipe the input text to ollama run gemma command and append it to blog post
 ollama run gemma <<EOF >> $POSTFILE
 Either create or extend a blog post based on input.
+Use markdown to fomat the blog.
 The blog post currently has the following content:
-"$POSTCONTENT"
+"$POSTCONTENT".
 Modify or extend the blog post based on the following input:
-"$input_text"
+"$input_text".
 Include everything that was in the post before.
 EOF
 
@@ -59,8 +60,8 @@ read_post
 POSTDESCRIPTION=$(ollama run gemma <<EOF
 In first person, write a summary, as short as possible, about this blog post:
 "$POSTCONTENT"
-Output the summary like this:
-summary = "[summary sentences here]"
+Output the summary in this format:
+summary = "[summary]"
 EOF
 )
 

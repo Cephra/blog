@@ -12,6 +12,7 @@ enableEmoji = true
 	showBreadCrumbs = true
 	defaultTheme = 'dark'
 	disableThemeToggle = true
+	author = 'christian frantzen'
 	[params.assets]
 		favicon	= 'favicon.ico'
 	[params.profileMode]

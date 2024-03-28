@@ -1,6 +1,7 @@
 +++
 title = 'Ode to the Familiar Code'
 date = 2024-03-25T18:50:55Z
+author = [ 'christian frantzen', 'gemma' ]
 summary = "The familiarity of well-written code evokes a sense of belonging and satisfaction, indicating its clarity, concision, and structure. When you can effortlessly return to your code after a break and understand it as if you had never left, it's a sign that your code is well-structured, concise, and clear."
 +++
 

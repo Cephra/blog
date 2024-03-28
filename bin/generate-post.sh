@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # change working dir
-cd $(dirname $0)/..
+cd "$(dirname "$0")/.."
 
 POST=posts/$1.md
 POSTFILE=content/$POST

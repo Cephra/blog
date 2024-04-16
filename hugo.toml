@@ -31,3 +31,6 @@ enableEmoji = true
 	[[params.socialIcons]]
 		name = "email"
 		url = "mailto:cf@0x29a.me"
+	[[params.socialIcons]]
+		name = "rss"
+		url = "/index.xml"

@@ -13,7 +13,7 @@ Whether you're a seasoned veteran or just curious to join the fun, we'd love to 
 
 Simply hop on over to: [0x29a.me:25565](ts3server://0x29a.me?port=25565)
 
-Once you're in, feel free to chat, strategize, and even goof around. And remember, this is a friendly space, so please keep the memes and negativity to a minimum. :smile:
+Once you're in, feel free to chat, strategize, and even goof around. And remember, this is a friendly space, so please don't be a d*ck. :duck: :smile:
 
 So, what are you waiting for? Come join the server, and let's make this a truly epic gaming experience!
 

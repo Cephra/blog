@@ -13,6 +13,10 @@ enableEmoji = true
 	defaultTheme = 'dark'
 	disableThemeToggle = true
 	author = 'christian frantzen'
+	[params.editPost]
+		URL = 'https://github.com/Cephra/blog/edit/main/content'
+		Text = 'edit'
+		appendFilePath = true
 	[params.assets]
 		favicon	= 'favicon.ico'
 	[params.profileMode]

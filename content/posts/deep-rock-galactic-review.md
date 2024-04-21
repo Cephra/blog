@@ -4,7 +4,6 @@ date = 2024-03-30T18:35:47+01:00
 summary = "Deep Rock Galactic is a great game with a lot of fun to be had, but the game's AI - at times - is incredibly stupid."
 +++
 
-
 ## Deep Rock Galactic: A Great Game with Room for Improvement
 
 Deep Rock Galactic. It's a great game with a ton of fun to be had. However, there's one area that could be improved: the AI can be so unbelievably stupid at times.

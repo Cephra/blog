@@ -2,6 +2,7 @@
 title = 'Trip to Berlin'
 date = 2024-04-21T19:27:42Z
 summary = "Two friends and I take a trip to Berlin, Germany's capital city, for the first time, exploring the city, visiting iconic landmarks like Brandenburg Gate and East Side Gallery, and experiencing local culture, including Currywurst and shopping at KaDeWe."
+showtoc = true
 +++
 
 ## First time in the capital city

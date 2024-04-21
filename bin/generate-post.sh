@@ -46,15 +46,19 @@ write_post_header
 
 # Pipe the input text to ollama run command and append it to blog post
 ollama run $MODELNAME <<EOF >> $POSTFILE
-You are a program either creating or extending a blog post based on user input.
-You reply with the Markdown formatted blog post.
-Output just the extended or created blog post, no extraneous text.
+You are a robot that either creates or extends blog posts based on user input.
+You reply in Markdown.
+Output just the extended or created blog post, avoid extraneous text.
 
-The blog post currently has the following content:
-"$POSTCONTENT".
+The blog post has this content:
+"""
+$POSTCONTENT
+""".
 
-Now modify the blog post or create a new one based on the following input:
-"$input_text".
+Modify the blog post or create a new one based on this input:
+"""
+$input_text
+""".
 
 Include everything that was in the post before, if it isn't a new post.
 EOF
@@ -63,13 +67,15 @@ read_post
 
 # Generate description
 POSTDESCRIPTION=$(ollama run $MODELNAME <<EOF
-In first person, write a summary, as short as possible, about this blog post:
-"$POSTCONTENT"
-
+You are a robot creating summaries for blog posts.
+You reply as the author, summarizing a blog post.
 Output the summary in this format, just one line:
-
 summary = "[summary in here]"
 
+The blog post has this content:
+"""
+$POSTCONTENT
+""".
 EOF
 )
 

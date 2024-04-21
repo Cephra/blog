@@ -5,6 +5,7 @@ cd "$(dirname "$0")/.."
 
 POST=posts/$1.md
 POSTFILE=content/$POST
+MODELNAME=llama3
 
 # Read post
 function read_post()  {
@@ -43,25 +44,32 @@ read_post
 # Write header
 write_post_header
 
-# Pipe the input text to ollama run gemma command and append it to blog post
-ollama run gemma <<EOF >> $POSTFILE
-Either create or extend a blog post based on input.
-Use markdown to fomat the blog.
+# Pipe the input text to ollama run command and append it to blog post
+ollama run $MODELNAME <<EOF >> $POSTFILE
+You are a program either creating or extending a blog post based on user input.
+You reply with the Markdown formatted blog post.
+Output just the extended or created blog post, no extraneous text.
+
 The blog post currently has the following content:
 "$POSTCONTENT".
-Modify or extend the blog post based on the following input:
+
+Now modify the blog post or create a new one based on the following input:
 "$input_text".
-Include everything that was in the post before.
+
+Include everything that was in the post before, if it isn't a new post.
 EOF
 
 read_post
 
 # Generate description
-POSTDESCRIPTION=$(ollama run gemma <<EOF
+POSTDESCRIPTION=$(ollama run $MODELNAME <<EOF
 In first person, write a summary, as short as possible, about this blog post:
 "$POSTCONTENT"
-Output the summary in this format:
-summary = "[summary]"
+
+Output the summary in this format, just one line:
+
+summary = "[summary in here]"
+
 EOF
 )
 

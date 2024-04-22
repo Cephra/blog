@@ -22,3 +22,7 @@ Things I'm interested in:
 * and more...
 
 Enjoy your stay! :smile:
+
+---------------------------------------------------
+
+You can find the privacy policy [here](/posts/privacy)

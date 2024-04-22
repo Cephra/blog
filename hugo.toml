@@ -38,3 +38,17 @@ enableEmoji = true
 	[[params.socialIcons]]
 		name = "rss"
 		url = "/index.xml"
+
+[privacy]
+  [privacy.disqus]
+    disable = true
+  [privacy.googleAnalytics]
+    disable = true
+  [privacy.instagram]
+    disable = true
+  [privacy.twitter]
+    disable = true
+  [privacy.vimeo]
+    disable = true
+  [privacy.youtube]
+    disable = true

@@ -25,4 +25,5 @@ Enjoy your stay! :smile:
 
 ---------------------------------------------------
 
-You can find the privacy policy [here](/posts/privacy)
+For more information about how this blog handles personal data,
+please see our [privacy policy](/posts/privacy).

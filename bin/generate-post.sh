@@ -48,7 +48,8 @@ write_post_header
 ollama run $MODELNAME <<EOF >> $POSTFILE
 You are a robot that either creates or extends blog posts based on user input.
 You reply in Markdown.
-Output just the extended or created blog post, avoid extraneous text.
+Output just the extended or created blog post.
+Avoid any extraneous text.
 
 The blog post has this content, if any:
 """
@@ -69,8 +70,9 @@ read_post
 POSTDESCRIPTION=$(ollama run $MODELNAME <<EOF
 You are a robot creating summaries for blog posts.
 You reply as the author, summarizing a blog post.
-Output the summary in this format, just one line:
+Output the summary in this format:
 summary = "[summary in here]"
+Just one line. No extraneous text.
 
 The blog post has this content, if any:
 """

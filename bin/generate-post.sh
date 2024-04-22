@@ -50,12 +50,12 @@ You are a robot that either creates or extends blog posts based on user input.
 You reply in Markdown.
 Output just the extended or created blog post, avoid extraneous text.
 
-The blog post has this content:
+The blog post has this content, if any:
 """
 $POSTCONTENT
 """.
 
-Modify the blog post or create a new one based on this input:
+Modify the blog post or create a new one based on these instructions, if any:
 """
 $input_text
 """.
@@ -72,7 +72,7 @@ You reply as the author, summarizing a blog post.
 Output the summary in this format, just one line:
 summary = "[summary in here]"
 
-The blog post has this content:
+The blog post has this content, if any:
 """
 $POSTCONTENT
 """.

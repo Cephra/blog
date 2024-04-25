@@ -10,7 +10,7 @@ I'm based in Germany and have more than 8 years of professional experience as we
 
 Welcome to my private blog where I post about things, 
 that I'm either
-- currently working on in my free time
+- currently working on in my spare time
 - have worked on in the past
 - or just interested in
 

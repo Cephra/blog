@@ -1,6 +1,6 @@
 baseURL = 'https://blog.0x29a.me/'
 languageCode = 'en-us'
-title = '0x29a.me'
+title = 'blog.0x29a.me'
 theme = ["github.com/adityatelange/hugo-PaperMod"]
 sectionPagesMenu = 'main'
 enableEmoji = true

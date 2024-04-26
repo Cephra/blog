@@ -64,7 +64,7 @@ This place was really cool, kind of scary too. The vibrant street art and graffi
 ### Alexanderplatz
 A must-see place for tourists, I guess. It's bustling with people, street performers, and food stalls.
 
-### Checkpoint Charly
+### Checkpoint Charlie
 ![checkpoint](https://fs.0x29a.me/static/checkpoint.webp)
 Standing at the spot where East met West: Checkpoint Charlie, Berlin's iconic symbol of freedom & reunification. A must-see stop on any Berlin itinerary!
 

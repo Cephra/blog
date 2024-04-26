@@ -4,6 +4,7 @@ title = 'blog.0x29a.me'
 theme = ["github.com/adityatelange/hugo-PaperMod"]
 sectionPagesMenu = 'main'
 enableEmoji = true
+enableRobotsTXT = true
 
 [outputs]
 	home = ["html", "rss", "json"]

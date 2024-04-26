@@ -24,7 +24,7 @@ enableRobotsTXT = true
 		enabled = true
 		title = "Christian Frantzen"
 		subtitle = "a software developer"
-		imageUrl = "https://fs.0x29a.me/static/pp.png"
+		imageUrl = "https://fs.0x29a.me/static/pp.webp"
 		imageTitle = "profile picture"
 		[[params.profileMode.buttons]]
 			name = 'about'

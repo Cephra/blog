@@ -14,6 +14,7 @@ enableRobotsTXT = true
 	defaultTheme = 'dark'
 	disableThemeToggle = true
 	author = 'christian frantzen'
+	description = 'christian frantzen - a software developer'
 	[params.editPost]
 		URL = 'https://github.com/Cephra/blog/edit/main/content'
 		Text = 'edit'

@@ -33,18 +33,18 @@ Did you know that Currywurst is one of Germany's most popular fast food dishes? 
 Now that we'd filled our tummies, it was time we started our Walking & Sightseeing journey. We set out to explore the city, taking in the sights and sounds of Berlin.
 
 ### Siegessäule
-![siegessaeule](https://fs.0x29a.me/static/arrival.jpg)
+![siegessaeule](https://fs.0x29a.me/static/arrival.webp)
 The Siegessäule stands tall in Berlin's Tiergarten park, a monument to Prussian military victories & German unification.
 
 ### Brandenburg Gate
-![brandenburg](https://fs.0x29a.me/static/brandenburg.jpg)
+![brandenburg](https://fs.0x29a.me/static/brandenburg.webp)
 We saw the iconic Brandenburg Gate. It's a must-see attraction for anyone visiting Berlin, and I can see why it's so famous.
 
 ### Russian Embassy
 Also notable was the Russian Embassy, which stood out due to its grand architecture.
 
 ### Reichtstag Building
-![reichstag](https://fs.0x29a.me/static/reichstag1.jpg)
+![reichstag](https://fs.0x29a.me/static/reichstag1.webp)
 And of course, we visited the impressive Reichstag Building!
 
 ## Day 2 - Thursday
@@ -54,18 +54,18 @@ After a good night of sleep, we did some brainstorming on what to do this day. W
 Before going to the East Side Gallery, we decided to go to the East Side Mall to buy some drinks and snacks to eat during our city journey. It's a great place to grab something to eat or just relax for a bit.
 
 ### East Side Gallery
-![eastside1](https://fs.0x29a.me/static/eastside1.jpg)
-![eastside2](https://fs.0x29a.me/static/eastside2.jpg)
-![eastside3](https://fs.0x29a.me/static/eastside3.jpg)
-![eastside4](https://fs.0x29a.me/static/eastside4.jpg)
-![eastside5](https://fs.0x29a.me/static/eastside5.jpg)
+![eastside1](https://fs.0x29a.me/static/eastside1.webp)
+![eastside2](https://fs.0x29a.me/static/eastside2.webp)
+![eastside3](https://fs.0x29a.me/static/eastside3.webp)
+![eastside4](https://fs.0x29a.me/static/eastside4.webp)
+![eastside5](https://fs.0x29a.me/static/eastside5.webp)
 This place was really cool, kind of scary too. The vibrant street art and graffiti-covered walls were a treat for the eyes. Did you know that the East Side Gallery is a 1.3 kilometer-long section of the Berlin Wall?
 
 ### Alexanderplatz
 A must-see place for tourists, I guess. It's bustling with people, street performers, and food stalls.
 
 ### Checkpoint Charly
-![checkpoint](https://fs.0x29a.me/static/checkpoint.jpg)
+![checkpoint](https://fs.0x29a.me/static/checkpoint.webp)
 Standing at the spot where East met West: Checkpoint Charlie, Berlin's iconic symbol of freedom & reunification. A must-see stop on any Berlin itinerary!
 
 ### Museum Island
@@ -75,7 +75,7 @@ Impressive buildings around here with awesome architecture. We didn't have time 
 ### KaDeWe
 This one was cool. Felt like the home of capitalism. The sheer scale and luxury of the store were impressive.
 
-![kadewe1](https://fs.0x29a.me/static/kadewe1.jpg)
+![kadewe1](https://fs.0x29a.me/static/kadewe1.webp)
 
 Did you know that KaDeWe is one of Europe's largest department stores and a popular shopping destination in Berlin? We didn't do much shopping, but it was fun to browse around and take in the atmosphere.
 
@@ -90,7 +90,7 @@ Greenpeace was having a party at the Weltuhr on Alexanderplatz. Kinda chill. It 
 We've spent a lot of time around Tiergarten Park and Regierungsviertel this day. It's an area with a mix of government buildings, parks, and monuments.
 
 ### 420 Day Berlin
-![420](https://fs.0x29a.me/static/420.jpg)
+![420](https://fs.0x29a.me/static/420.webp)
 Coincidentally on this day, there was also a "420 Day" party near the Brandenburg Gate to celebrate April 20th, the "international cannabis day". With the recent partial legalization of cannabis in Germany, the scale of that party was huge. Walking past the crowds of people and smelling the clouds of weed smoke was a surreal experience indeed. I'm not sure what to make of it, but it was definitely memorable!
 
 ### Departure back home

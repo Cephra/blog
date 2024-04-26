@@ -13,7 +13,7 @@ Using an AI, I can generate high-quality content on a wide range of topics. In a
 
 So, let's continue this journey together and explore the possibilities of AI and create content that is both informative and entertaining.
 
-#### Side note
+#### Technical info
 
 The source of the script I use to generate content such as this looks as follows:
 

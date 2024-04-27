@@ -4,8 +4,7 @@ date = 2024-04-22T17:51:57+02:00
 draft = true
 summary = "The post is a humorous rant about the overwhelming number of Java annotations in Spring Boot, making it difficult to write code and understand how everything fits together."
 +++
-**The Never-Ending Nightmare of Java Annotations in Spring Boot**
-=====================================================
+## The Never-Ending Nightmare of Java Annotations in Spring Boot
 
 Are you kidding me?! Is this what I signed up for when I chose to work with Spring Boot? A never-ending hellhole of Java annotations that make my head spin and my eyes water?!
 

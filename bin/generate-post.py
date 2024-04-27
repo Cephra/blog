@@ -3,6 +3,7 @@
 import sys
 import os
 import subprocess
+import argparse
 
 from string import Template
 
@@ -103,13 +104,11 @@ class BlogPostGenerator:
         self._blog_post.save()
 
 if __name__ == "__main__":
-    argc = len(sys.argv)
-    if argc != 3:
-        print("Usage: python script.py <postname> <instructions>") 
-        sys.exit(1)
+    parser = argparse.ArgumentParser(description='Blog Post Generator')
+    parser.add_argument('postname', help='The name of the blog post')
+    parser.add_argument('instructions', help='The instructions for the blog post')
 
-    blog_post_generator = BlogPostGenerator(
-        sys.argv[1],
-        sys.argv[2]
-    )
+    args = parser.parse_args()
+
+    blog_post_generator = BlogPostGenerator(args.postname, args.instructions)
     blog_post_generator.generate_post()

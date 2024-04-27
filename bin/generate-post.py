@@ -114,7 +114,6 @@ class BlogPostGenerator:
                 content=self._blog_post.join_content(start_line, end_line).strip(),
                 instructions=self._instructions
             )
-            print(generate_prompt)
             ollama_post = subprocess.Popen(['ollama', 'run', 'llama3'], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
             generated_post = ollama_post.communicate(generate_prompt.encode('utf-8'))[0].decode('utf-8')
             self._blog_post.update_content(generated_post, start_line, end_line)

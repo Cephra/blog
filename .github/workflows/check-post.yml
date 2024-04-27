@@ -1,0 +1,20 @@
+name: Checks that hugo can successfully build
+
+on:
+    push:
+
+jobs:
+    check:
+        runs-on: ubuntu-latest
+        steps:
+            -
+                name: Checkout repository
+                uses: actions/checkout@v4
+            -   
+                name: Setup Hugo
+                uses: peaceiris/actions-hugo@v2
+                with:
+                    hugo-version: '0.121.2'
+            -
+                name: Run a hugo build
+                run: hugo --minify

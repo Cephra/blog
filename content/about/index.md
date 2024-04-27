@@ -30,4 +30,4 @@ Please note that everything shared on this blog reflects my personal perspective
 For more information about how I handle your personal data,
 please see my [privacy policy](/posts/privacy).
 
-### Enjoy your stay! :smile:
+### Enjoy your stay! :heart:

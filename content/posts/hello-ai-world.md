@@ -1,7 +1,7 @@
 +++
 title = 'Hello AI World'
 date = 2024-04-27T17:06:48+02:00
-author = [ 'christian frantzen', 'gemma' ]
+author = [ 'christian frantzen', 'gemma', 'llama3' ]
 summary = "The post discusses the capabilities of an AI-powered robot that can generate high-quality content on various topics, and its potential to enhance its own work. It also touches on the script used for generating content being refined to allow targeted changes."
 +++
 ## BEEP BOOP BZZT! :robot:

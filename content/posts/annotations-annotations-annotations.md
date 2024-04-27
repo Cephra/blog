@@ -1,7 +1,6 @@
 +++
 title = 'Annotations Annotations Annotations'
 date = 2024-04-28T00:00:13+02:00
-draft = true
 summary = "The post is a humorous rant about the overwhelming number of Java annotations in Spring Boot, making it difficult to write code and understand how everything fits together."
 +++
 ## The Never-Ending Nightmare of Java Annotations in Spring Boot

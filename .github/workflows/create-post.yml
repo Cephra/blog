@@ -10,7 +10,7 @@ permissions:
     
 jobs:
     create-tag:
-        if: github.ehent.created
+        if: github.event.created
         runs-on: ubuntu-latest
         steps:
             -

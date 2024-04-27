@@ -43,15 +43,13 @@ class BlogPost:
             print(f"Error reading file '{self._postfile}': {e}")
             
     def _adjust_line_numbers(self, start_line: int, end_line: int) -> (int, int):
-        if self._front_matter and start_line is not None:
-            num_front_matter_lines = len(self._front_matter)
-            start_line = max(0, start_line - num_front_matter_lines - 1)
-            if self._front_matter and end_line is not None:
-                return start_line, min(len(self._content), end_line - num_front_matter_lines)
-            else:
-                return start_line, end_line
-        else:
-            return start_line, end_line
+        if self._front_matter:
+            if start_line is not None:
+                num_front_matter_lines = len(self._front_matter)
+                start_line = max(0, start_line - num_front_matter_lines - 1)
+            if end_line is not None:
+                end_line = min(len(self._content), end_line - num_front_matter_lines)
+        return start_line, end_line
 
     def join_content(self, start_line: int = None, end_line: int = None) -> str:
         start_line, end_line = self._adjust_line_numbers(start_line, end_line)

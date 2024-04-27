@@ -66,7 +66,9 @@ class BlogPost:
             ) -> None:
         new_content = ["{}\n".format(line) for line in new_content.split('\n')]
         start_line, end_line = self._adjust_line_numbers(start_line, end_line)
-        self._content = self._content[:start_line] + new_content + self._content[end_line:]
+        prefix = self._content[:start_line] if (start_line is not None) else []
+        suffix = self._content[end_line:] if (end_line is not None) else []
+        self._content = prefix + new_content + suffix
     
     def update_summary(self, new_summary: str) -> None:
         new_front_matter = [line for line in self._front_matter if not line.startswith('summary')]

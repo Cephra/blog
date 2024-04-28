@@ -1,6 +1,5 @@
 +++
 title = 'Privacy Policy'
-
 +++
 
 As the owner of this blog, I am committed to protecting the personal data of my readers and users. This privacy policy outlines how I handle your personal data when you visit my blog.
@@ -14,7 +13,7 @@ This privacy policy applies to all personal data collected by me through my blog
 
 When you visit my blog or any subdomain, the following personal data is collected:
 
-* *Log files*: My web server (nginx) collects log files that include information such as your IP address, browser type, operating system, and timestamp of access. This data is used solely for troubleshooting purposes and to monitor website performance.
+* **Log files**: My web server (nginx) collects log files that include information such as your IP address, browser type, operating system, and timestamp of access. This data is used solely for troubleshooting purposes and to monitor website performance.
 * **Cookies**: I do not set or use any cookies on my blog or any subdomain.
 
 **How Your Personal Data Is Used**

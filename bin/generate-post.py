@@ -95,7 +95,7 @@ class BlogPostGenerator:
                 self,
                 postname: str,
                 instructions: str,
-                model: str = 'dolphin-llama3'
+                model: str = 'llama3'
             ) -> None:
         self._model = model
 
@@ -141,7 +141,7 @@ if __name__ == "__main__":
     parser.add_argument('instructions', help='The instructions for the blog post')
     parser.add_argument('-s', '--start-line', type=int, default=None, help='The starting line number (optional)')
     parser.add_argument('-e', '--end-line', type=int, default=None, help='The ending line number (optional)')
-    parser.add_argument('-m', '--model', type=str, default='dolphin-llama3', help='The model to use (optional)')
+    parser.add_argument('-m', '--model', type=str, default='llama3', help='The model to use (optional)')
     parser.add_argument('-S', '--skip-summary', action='store_true', help='Skip summary generation (optional)')
     parser.add_argument('-G', '--skip-generate', action='store_true', help='Skip post generation (optional)')
 

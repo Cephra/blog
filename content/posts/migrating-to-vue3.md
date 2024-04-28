@@ -1,7 +1,6 @@
 +++
 title = 'Migrating to Vue3'
 date = 2024-04-28T19:15:09+02:00
-draft = true
 summary = "The author successfully migrated a project from Vue 2 to Vue 3, finding the process smooth and easy due to improvements in performance and codebase. Key changes included switching from webpack to Vite and leveraging composability features."
 +++
 ## Migrating from Vue 2 to Vue 3: A Smooth Experience
@@ -17,5 +16,3 @@ The reason for switching from Vue 2 was a no-brainer - the framework has reached
 Using Git was an instrumental tool during this process as it allowed me to easily compare the differences between the Vue 2 and Vue 3 codebases. This made it much easier to spot any issues or areas that needed attention during the migration process.
 
 In conclusion, migrating from Vue 2 to Vue 3 was relatively seamless, thanks in part to Vite and the use of Git for comparing changes. While making the switch, I also changed from yarn to npm as well - that decision was purely based on my personal preference. In conclusion, if you're still using Vue 2, I would highly recommend migrating to Vue 3 as it has improved our development workflow and overall performance.
-
-

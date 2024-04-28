@@ -147,7 +147,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    blog_post_generator = BlogPostGenerator(args.postname, args.instructions)
+    blog_post_generator = BlogPostGenerator(args.postname, args.instructions, model=args.model)
     blog_post_generator.generate_post(
         args.start_line,
         args.end_line,

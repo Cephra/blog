@@ -9,7 +9,7 @@ Today I successfully migrated one of my projects from Vue 2 to Vue 3, and it was
 
 One of the key changes during this migration process was moving from webpack to Vite for our project's build tool. This change brought about better development experiences as Vite offers a faster hot module replacement system, which makes it much easier to see the effects of code changes immediately.
 
-Additionally, by migrating to Vue 3, we noticed that our codebase actually became more streamlined and compact. This is largely due to Vue 3's improved composability and reusability features, which allowed me to remove some unnecessary code and further optimize our application.
+Additionally, by migrating to Vue 3, we noticed that our codebase actually became more streamlined and compact. This is largely due to Vue 3's improved composability and reusability features, which allowed me to remove some unnecessary code and further optimize my application.
 
 The reason for switching from Vue 2 was a no-brainer - the framework has reached its end-of-life milestone on December 31st, 2023. As of that date, Vue 2 is no longer receiving new features, updates, or fixes. With Vue 3 being actively maintained and receiving new features, it was a straightforward decision to make the switch.
 

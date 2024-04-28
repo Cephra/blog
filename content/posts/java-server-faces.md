@@ -32,4 +32,3 @@ If you're looking to start a new project or migrate an existing one from JSF, it
 #### Conclusion
 
 In conclusion, JSF is no longer the best choice for building modern web applications. Its lack of understanding of modern web development, verbosity, and maintenance nightmares make it a nightmare to use. It's time to say goodbye to JSF and hello to better alternatives that can help you build robust, scalable, and maintainable applications.
-

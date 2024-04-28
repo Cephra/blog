@@ -94,8 +94,11 @@ class BlogPostGenerator:
     def __init__(
                 self,
                 postname: str,
-                instructions: str
+                instructions: str,
+                model: str = 'dolphin-llama3'
             ) -> None:
+        self._model = model
+
         self._postname = postname
         self._instructions = instructions
 
@@ -116,7 +119,7 @@ class BlogPostGenerator:
                 content=self._blog_post.join_content(start_line, end_line).strip(),
                 instructions=self._instructions
             )
-            ollama_post = subprocess.Popen(['ollama', 'run', 'llama3'], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+            ollama_post = subprocess.Popen(['ollama', 'run', self._model], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
             generated_post = ollama_post.communicate(generate_prompt.encode('utf-8'))[0].decode('utf-8')
             self._blog_post.update_content(generated_post, start_line, end_line)
 
@@ -125,7 +128,7 @@ class BlogPostGenerator:
             summarize_prompt = self._summarize_template.render(
                 content=self._blog_post.join_content()
             )
-            ollama_summary = subprocess.Popen(['ollama', 'run', 'llama3'], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+            ollama_summary = subprocess.Popen(['ollama', 'run', self._model], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
             generated_summary = ollama_summary.communicate(summarize_prompt.encode('utf-8'))[0].decode('utf-8')
             self._blog_post.update_summary(generated_summary)
         
@@ -136,10 +139,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Blog Post Generator')
     parser.add_argument('postname', help='The name of the blog post')
     parser.add_argument('instructions', help='The instructions for the blog post')
-    parser.add_argument('--start-line', type=int, default=None, help='The starting line number (optional)')
-    parser.add_argument('--end-line', type=int, default=None, help='The ending line number (optional)')
-    parser.add_argument('--skip-summary', action='store_true', help='Skip summary generation (optional)')
-    parser.add_argument('--skip-generate', action='store_true', help='Skip post generation (optional)')
+    parser.add_argument('-s', '--start-line', type=int, default=None, help='The starting line number (optional)')
+    parser.add_argument('-e', '--end-line', type=int, default=None, help='The ending line number (optional)')
+    parser.add_argument('-m', '--model', type=str, default='dolphin-llama3', help='The model to use (optional)')
+    parser.add_argument('-S', '--skip-summary', action='store_true', help='Skip summary generation (optional)')
+    parser.add_argument('-G', '--skip-generate', action='store_true', help='Skip post generation (optional)')
 
     args = parser.parse_args()
 

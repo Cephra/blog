@@ -5,7 +5,7 @@ summary = "Migrating from Vue 2 to Vue 3 was a smooth experience with improved p
 +++
 ## Migrating from Vue 2 to Vue 3: A Smooth Experience
 
-Today I successfully migrated one of my projects from Vue 2 to Vue 3, and it was quite an easy and smooth experience. Vue 3 offers improved performance and a more lightweight codebase compared to its predecessor.
+Today I successfully [migrated one of my projects from Vue 2 to Vue 3](https://github.com/Cephra/revue/commit/d60a55cf17f56daa3a574f4a94d4a647597491d5), and it was quite an easy and smooth experience. Vue 3 offers improved performance and a more lightweight codebase compared to its predecessor.
 
 One of the key changes during this migration process was moving from webpack to Vite for my project's build tool. This change brought about better development experiences as Vite offers a faster hot module replacement system, which makes it much easier to see the effects of code changes immediately.
 

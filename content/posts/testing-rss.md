@@ -1,5 +1,5 @@
 +++
-title = 'Testing RSS'
+title = 'Testing RSS Feed'
 date = 2024-04-29T00:44:26+02:00
 summary = "This blog post announces the setup of an RSS feed for this blog, allowing readers to subscribe and receive updates on new posts."
 +++

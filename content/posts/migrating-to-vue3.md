@@ -1,5 +1,5 @@
 +++
-title = 'Migrating to Vue3'
+title = 'Migrating to Vue 3'
 date = 2024-04-28T19:15:09+02:00
 summary = "Migrating from Vue 2 to Vue 3 was a smooth experience with improved performance and codebase. Key changes included switching from webpack to Vite for better development experiences, streamlining the codebase with Vue 3's composability features, and using Git for comparing changes."
 +++

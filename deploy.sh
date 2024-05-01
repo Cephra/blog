@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# use local hugo binary if present
+if [ -f ~/.local/bin/hugo ]; then
+  alias hugo=~/.local/bin/hugo
+fi
+
 # ensure project root
 cd "$(dirname "$0")"
 

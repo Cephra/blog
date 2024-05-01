@@ -1,5 +1,5 @@
 baseURL = 'https://blog.0x29a.me/'
-languageCode = 'en-us'
+languageCode = 'en'
 title = 'blog.0x29a.me'
 theme = ["github.com/adityatelange/hugo-PaperMod"]
 sectionPagesMenu = 'main'
@@ -15,24 +15,31 @@ enableRobotsTXT = true
 	disableThemeToggle = true
 	author = 'christian frantzen'
 	description = 'christian frantzen - a software developer'
+
 	[params.editPost]
 		URL = 'https://github.com/Cephra/blog/edit/main/content'
 		Text = 'edit'
 		appendFilePath = true
+
 	[params.assets]
 		favicon	= 'favicon.ico'
+
 	[params.profileMode]
 		enabled = true
+
 		title = "Christian Frantzen"
 		subtitle = "a software developer"
+
 		imageUrl = "https://fs.0x29a.me/static/pp-small.webp"
 		imageTitle = "profile picture"
+
 		[[params.profileMode.buttons]]
 			name = 'about'
 			url = '/about'
 		[[params.profileMode.buttons]]
 			name = 'posts'
 			url = '/posts'
+
 	[[params.socialIcons]]
 		name = "github"
 		url = "https://github.com/Cephra"

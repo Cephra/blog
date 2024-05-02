@@ -1,6 +1,6 @@
 baseURL = 'https://blog.0x29a.me/'
 languageCode = 'en'
-title = 'blog.0x29a.me'
+title = 'blog'
 theme = ["github.com/adityatelange/hugo-PaperMod"]
 sectionPagesMenu = 'main'
 enableEmoji = true
@@ -15,6 +15,9 @@ enableRobotsTXT = true
 	disableThemeToggle = true
 	author = 'christian frantzen'
 	description = 'christian frantzen - a software developer'
+
+	[params.label]
+		icon = "https://blog.0x29a.me/favicon-32x32.png"
 
 	[params.editPost]
 		URL = 'https://github.com/Cephra/blog/edit/main/content'

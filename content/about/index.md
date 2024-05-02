@@ -16,11 +16,11 @@ that I'm either
 - or just interested in
 
 Things I'm interested in:
-* Web Development
-* AI
-* GNU/Linux
-* Optimization
-* and more...
+- Web Development
+- AI
+- GNU/Linux
+- Optimization
+- and more...
 
 #### Personal opinions only
 

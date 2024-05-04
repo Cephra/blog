@@ -3,7 +3,7 @@ title = 'TeamSpeak 3 Server'
 date = 2024-01-19T22:29:53Z
 summary = "I have set up a TeamSpeak 3 server to connect with fellow gamers and invite them to join a virtual community. The server is open to all, and the author encourages people to join and chat, strategize, and goof around."
 +++
-## TeamSpeak 3 Server - A Casual Hangout for Gamers
+## A Casual Hangout for Gamers
 
 Greetings, fellow gamers! 👋
 

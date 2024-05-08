@@ -17,7 +17,7 @@ enableRobotsTXT = true
 	description = 'christian frantzen - a software developer'
 
 	[params.label]
-		icon = "https://blog.0x29a.me/android-chrome-192x192.png"
+		icon = "https://blog.0x29a.me/favicon-32x32.png"
 
 	[params.editPost]
 		URL = 'https://github.com/Cephra/blog/edit/main/content'

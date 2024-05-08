@@ -1,6 +1,7 @@
 +++
 title = 'about'
 menus = 'main'
+index = true
 +++
 
 ### Hi :wave:

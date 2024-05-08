@@ -1,6 +1,7 @@
 +++
 title = 'Privacy Policy'
 showtoc = true
+index = true
 +++
 
 As the owner of this blog, I am committed to protecting the personal data of my readers and users. This privacy policy outlines how I handle your personal data when you visit my blog.

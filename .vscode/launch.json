@@ -7,10 +7,23 @@
         {
             "name": "Python Debugger: Blog generator with Arguments",
             "type": "debugpy",
+            "python": "/usr/bin/docker",
+            "pythonArgs": [ 
+                "compose", 
+                "-f", "bin/generator/compose.yaml",
+                "run", "--rm", "app",
+                "python"
+            ],
             "request": "launch",
-            "program": "${workspaceFolder}/bin/generate-post.py",
+            "program": "/app/generate-post.py",
             "console": "integratedTerminal",
-            "args": "local-code-shortcode --start-line 7 --end-line 7 \"Rephrase.\""
+            "args": "local-code-shortcode \"Rephrase and extend the post.\"",
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}/bin/generator",
+                    "remoteRoot": "/app"
+                }
+            ]
         }
     ]
 }

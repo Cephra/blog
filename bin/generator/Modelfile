@@ -1,5 +1,0 @@
-FROM llama3
-
-PARAMETER temperature 0
-
-SYSTEM "You only respond in JSON."

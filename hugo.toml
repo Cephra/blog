@@ -1,8 +1,13 @@
 baseURL = 'https://blog.0x29a.me/'
+
 languageCode = 'en'
+
 title = '0x29a.me'
+
 theme = ["github.com/adityatelange/hugo-PaperMod"]
+
 sectionPagesMenu = 'main'
+
 enableEmoji = true
 enableRobotsTXT = true
 
@@ -11,25 +16,19 @@ enableRobotsTXT = true
 
 [params]
 	showBreadCrumbs = true
+
 	defaultTheme = 'dark'
 	disableThemeToggle = true
+
 	author = 'christian frantzen'
 	description = 'christian frantzen - a software developer'
 
-	[params.footer]
-		text = "[privacy](/privacy)"
+	[params.assets]
+		favicon	= 'favicon.ico'
 
 	[params.label]
 		text = "blog"
 		icon = "https://blog.0x29a.me/favicon-32x32.png"
-
-	[params.editPost]
-		URL = 'https://github.com/Cephra/blog/edit/main/content'
-		Text = 'edit'
-		appendFilePath = true
-
-	[params.assets]
-		favicon	= 'favicon.ico'
 
 	[params.profileMode]
 		enabled = true
@@ -56,6 +55,14 @@ enableRobotsTXT = true
 	[[params.socialIcons]]
 		name = "rss"
 		url = "/index.xml"
+
+	[params.editPost]
+		URL = 'https://github.com/Cephra/blog/edit/main/content'
+		Text = 'edit'
+		appendFilePath = true
+
+	[params.footer]
+		text = "[privacy](/privacy)"
 
 [privacy]
   [privacy.disqus]

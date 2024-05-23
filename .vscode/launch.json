@@ -15,7 +15,7 @@
                 "python"
             ],
             "request": "launch",
-            "program": "/app/generate-post.py",
+            "program": "/app/${fileBasename}",
             "console": "integratedTerminal",
             "args": "local-code-shortcode \"Rephrase and extend the post.\"",
             "pathMappings": [

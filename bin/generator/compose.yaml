@@ -7,6 +7,6 @@ services:
       - ./:/app
       - ../../:/app/mnt-workspace
       - /opt/venv
-      - /home/szt/.vscode-oss:/home/szt/.vscode-oss
+      - $HOME/.vscode-oss:$HOME/.vscode-oss
     network_mode: host
     command: python test.py

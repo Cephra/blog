@@ -30,7 +30,7 @@ Please note that everything shared on this blog reflects my personal perspective
 
 #### No job offers please
 
-Also note that I'm not looking for any kind of job offers. I'm not acting as a professional here.
+Also note that I'm **not** looking for any kind of job offers. I'm not acting as a professional here.
 
 #### Your privacy matters
 

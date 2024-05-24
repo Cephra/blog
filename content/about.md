@@ -26,7 +26,11 @@ Things I'm interested in:
 
 #### Personal opinions only
 
-Please note that everything shared on this blog reflects my personal perspective and opinions. This is not a professional or official outlet; it's just me sharing what I'm passionate about.
+Please note that everything shared on this blog reflects my personal perspective and opinions. This is **not** a professional or official outlet; it's just me sharing what I'm passionate about.
+
+#### No job offers please
+
+Also note that I'm not looking for any kind of job offers. I'm not acting as a professional here.
 
 #### Your privacy matters
 

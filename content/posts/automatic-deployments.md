@@ -1,6 +1,7 @@
 +++
 title = "Automatic Deployments"
 date = 2024-06-04 21:04:11+00:00
+summary = "Automating deployment using webhooks streamlines workflows by saving time and effort, reducing errors, increasing efficiency and consistency, and providing peace of mind. Customizable scripts enable tailored deployments for each project."
 +++
 I wrote a system using webhooks to automate the deployment of all my web applications as soon as changes are merged into the main branch. This has been incredibly convenient and has streamlined my workflow significantly. :star:
 

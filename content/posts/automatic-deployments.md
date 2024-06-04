@@ -12,4 +12,6 @@ Automation also helps to increase efficiency and consistency. Deployment process
 
 Finally, automation gives you peace of mind. Knowing that your deployments are being handled automatically means you can focus on other tasks without worrying about whether your application is being deployed correctly. You can rest assured that your application will be updated with the latest changes, no matter where you are in the world. :earth_africa:
 
+As an example of this in action, I'd like to share a link to [https://www.0x29a.me/](https://www.0x29a.me/), which is one such application that has been automated using webhooks.
+
 In my particular case, I have made it so that each project has a `deploy.sh` file inside its root which contains the necessary steps on a per-project basis. This allows me to customize the deployment process for each individual project, ensuring that they are deployed correctly and efficiently. :bulb:

@@ -1,10 +1,10 @@
 +++
 title = "From Functional to SQL"
 date = 2024-06-27 00:54:49+02:00
-summary = "This post demonstrates how to calculate the average value of a meter over time using SQL, highlighting its advantages in performing calculations directly on large datasets."
+summary = "This post demonstrates how to calculate the normalized value of a meter type over time using SQL, highlighting its advantages in performing calculations directly on large datasets."
 +++
 
-In my previous post, I discussed a functional approach to solving the problem of calculating the average value of a meter over time. However, not all data processing tasks can be solved using programming languages alone. In this post, I'll show you how to achieve the same result using SQL.
+In my previous post, I discussed a functional approach to solving the problem of calculating the normalized value of a meter type over time. However, not all data processing tasks can be solved using programming languages alone. In this post, I'll show you how to achieve the same result using SQL.
 
 ```sql
 create or replace view v_value_stats as
@@ -100,7 +100,7 @@ select
 from delta_year as dy
 ```
 
-Calculating the average value of a meter over time can be a complex task, especially when dealing with large datasets. One advantage of using SQL for this task is that it allows you to perform calculations directly on the data, without having to transfer it to another system or language. This can greatly improve performance and reduce the risk of errors.
+Calculating things like the normalized or average value of a meter type over time can be a complex task, especially when dealing with large datasets. One advantage of using SQL for this task is that it allows you to perform calculations directly on the data, without having to transfer it to another system or language. This can greatly improve performance and reduce the risk of errors.
 
 On the other hand, SQL may not be as flexible as programming languages like Python or JavaScript, which can make it more difficult to implement certain types of logic. Additionally, SQL queries can become complex and difficult to read if they are not well-organized and documented.
 

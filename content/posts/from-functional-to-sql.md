@@ -102,7 +102,7 @@ from delta_year as dy
 
 Calculating the average value of a meter over time can be a complex task, especially when dealing with large datasets. One advantage of using SQL for this task is that it allows you to perform calculations directly on the data, without having to transfer it to another system or language. This can greatly improve performance and reduce the risk of errors.
 
-On the other hand, SQL may not be as flexible as programming languages like Python or Java, which can make it more difficult to implement certain types of logic. Additionally, SQL queries can become complex and difficult to read if they are not well-organized and documented.
+On the other hand, SQL may not be as flexible as programming languages like Python or JavaScript, which can make it more difficult to implement certain types of logic. Additionally, SQL queries can become complex and difficult to read if they are not well-organized and documented.
 
 Despite these limitations, SQL is a powerful tool for performing data analysis and calculations. With the right skills and knowledge, you can use it to solve a wide range of problems, including calculating the average value of a meter over time.
 

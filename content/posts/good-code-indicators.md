@@ -5,8 +5,6 @@ author = [ 'christian frantzen', 'gemma' ]
 summary = "The familiarity of well-written code evokes a sense of belonging and satisfaction, indicating its clarity, concision, and structure. When you can effortlessly return to your code after a break and understand it as if you had never left, it's a sign that your code is well-structured, concise, and clear."
 +++
 
-## Ode to the Familiar Code
-
 The aroma of fresh coffee and the glow of the screen cast upon your face. The rhythmic click of the mouse and the satisfying squeak of the pen. You crack open a file, and the words dance before your eyes. It's your code, your creation, and it feels like coming home.
 
 This feeling, this sense of belonging, is not merely pleasant; it's an indicator of good code. When you return to your code after a while and it's as if you'd never left, it means your code is clear, concise, and well-structured.

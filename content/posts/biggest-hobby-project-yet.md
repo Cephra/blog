@@ -5,7 +5,7 @@ summary = "I just finished my biggest hobby project... almost!"
 +++
 I just finished my biggest hobby project... almost!
 
-After days of planning and tinkering, I'm thrilled to announce that I've made significant progress on my most ambitious DIY project to date! It's been a wild ride, with its fair share of setbacks and triumphs, but it was all worth it in the end. :star:
+After days of planning and tinkering, I'm thrilled to announce that I've made significant progress on my most ambitious hobby IT project to date! It's been a wild ride, with its fair share of setbacks and triumphs, but it was all worth it in the end. :star:
 
 It took weeks. Weeks turned into months as I encountered unexpected challenges and had to troubleshoot my way through them. And then, just when I thought I was getting close to the finish line, I decided to take a two-year break from the project from 2022 to now, 2024.
 

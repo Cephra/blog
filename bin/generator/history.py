@@ -16,3 +16,6 @@ class History():
 
     def push_message_obj(self, message: dict):
         self._history.append(message)
+        
+    def get_last(self) -> str:
+        return self._history[-1]['content']

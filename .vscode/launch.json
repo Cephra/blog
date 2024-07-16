@@ -15,9 +15,9 @@
                 "python"
             ],
             "request": "launch",
-            "program": "/app/${fileBasename}",
+            "program": "/app/generate-post.py",
             "console": "integratedTerminal",
-            "args": "local-code-shortcode \"Rephrase and extend the post.\"",
+            "args": "rust-is-great \"Make the code snippet a bit more sophisticated.\"",
             "pathMappings": [
                 {
                     "localRoot": "${workspaceFolder}/bin/generator",

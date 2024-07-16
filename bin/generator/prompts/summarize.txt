@@ -8,11 +8,11 @@ Example responses:
 - In this post I talk about delicious cookies
 - This post explains how to properly cut a pineapple
 
+Avoid writing:
+- The author ...
+
 Output just the summary of the blog post.
 No strange phrasing.
 No extraneous text.
 
-The blog post has this content:
-"""
-$content
-""".
+The user's input will be blog posts.

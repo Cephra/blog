@@ -1,7 +1,7 @@
 +++
 title = "Biggest Hobby Project... yet!"
 date = 2024-07-15 17:43:02+00:00
-summary = "I have made significant progress on my management app for house meter data, allowing homeowners to track and analyze utility usage. After a 2-year hiatus, I've learned new skills and gained a fresh perspective, and am now motivated to complete the project."
+summary = "I have made significant progress on my management app for house meter data, allowing homeowners to track and analyze utility usage. After a 2-year break, I've learned new skills and gained a fresh perspective, and am now motivated to complete the project."
 +++
 I just finished my biggest hobby project... almost!
 

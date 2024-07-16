@@ -5,7 +5,7 @@ import tomli_w
 
 from const import WORKSPACE
 
-class BlogPost:
+class BlogPost():
     def __init__(self, postname: str) -> None:
         self._postname = postname
         self._postfile = os.path.join(WORKSPACE, 'content/posts', self._postname + '.md')
@@ -15,8 +15,12 @@ class BlogPost:
         self._content = []
 
         if not os.path.exists(self._postfile):
+            self.is_fresh = True
             cmd = ['hugo', 'new', 'content', 'posts/{0}.md'.format(self._postname)]
             subprocess.run(cmd, check=True, cwd=WORKSPACE)
+        else:
+            self.is_fresh = False
+
         self._read_post()
 
     def _read_post(self) -> None:
@@ -58,7 +62,7 @@ class BlogPost:
 
     def front_matter_to_toml(self) -> str:
         return tomli_w.dumps(self._front_matter)
-    
+
     def update_content(
                 self,
                 new_content: str,
@@ -80,3 +84,5 @@ class BlogPost:
                 file.write("+++\n{}+++\n".format(self.front_matter_to_toml()))
             if self._content:
                 file.write(self.join_content())
+        if self.is_fresh:
+            self.is_fresh = False

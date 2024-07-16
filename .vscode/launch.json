@@ -17,7 +17,7 @@
             "request": "launch",
             "program": "/app/generate-post.py",
             "console": "integratedTerminal",
-            "args": "local-code-shortcode \"Rephrase and extend the post.\"",
+            "args": "rust-is-great",
             "pathMappings": [
                 {
                     "localRoot": "${workspaceFolder}/bin/generator",

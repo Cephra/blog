@@ -5,7 +5,7 @@ import tomli_w
 
 from const import WORKSPACE
 
-class BlogPost:
+class BlogPost():
     def __init__(self, postname: str) -> None:
         self._postname = postname
         self._postfile = os.path.join(WORKSPACE, 'content/posts', self._postname + '.md')
@@ -62,7 +62,7 @@ class BlogPost:
 
     def front_matter_to_toml(self) -> str:
         return tomli_w.dumps(self._front_matter)
-    
+
     def update_content(
                 self,
                 new_content: str,

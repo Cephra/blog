@@ -13,6 +13,7 @@ class BlogPostGenerator:
             ) -> None:
         self._model = model
         self._postname = postname
+        self._history = History()
 
     def generate_post(
                 self,

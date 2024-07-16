@@ -17,7 +17,7 @@
             "request": "launch",
             "program": "/app/generate-post.py",
             "console": "integratedTerminal",
-            "args": "rust-is-great \"Make the code snippet a bit more sophisticated.\"",
+            "args": "rust-is-great",
             "pathMappings": [
                 {
                     "localRoot": "${workspaceFolder}/bin/generator",

@@ -9,19 +9,10 @@ class BlogPostGenerator:
     def __init__(
                 self,
                 postname: str,
-                instructions: str,
                 model: str = 'llama3'
             ) -> None:
         self._model = model
-
         self._postname = postname
-        self._instructions = instructions
-
-        self._blog_post = BlogPost(postname)
-        self._history = History()
-        self._generate_agent = BlogAgent(model=model, history=self._history)
-        self._extend_agent = ExtendAgent(blog_post=self._blog_post, model=model, history=self._history)
-        self._summary_agent = SummaryAgent(model=model)
 
     def generate_post(
                 self,
@@ -31,19 +22,26 @@ class BlogPostGenerator:
                 skip_summary: bool = False,
                 skip_generate: bool = False,
             ) -> str:
-        if self._blog_post.is_fresh:
-            self._generate_agent.chat(instructions)
-        else:
-            self._extend_agent.chat(instructions)
+        self._blog_post = BlogPost(self._postname)
 
-        last_response = self._history.get_last()
+        agent = None
+        last_response = None
+
+        if self._blog_post.is_fresh:
+            agent = BlogAgent(model=self._model)
+        else:
+            agent = ExtendAgent(blog_post=self._blog_post, model=self._model)
+
+        last_response = agent.chat(instructions)["content"]
+
         self._blog_post.update_content(
             last_response,
             start_line=start_line,
             end_line=end_line
         )
         
-        summary = self._summary_agent.chat(self._blog_post.join_content(
+        summary_agent = SummaryAgent(model=self._model)
+        summary = summary_agent.chat(self._blog_post.join_content(
             start_line=start_line,
             end_line=end_line
         ))["content"]

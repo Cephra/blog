@@ -54,5 +54,9 @@ class BlogPostGenerator:
         
     def repl(self):
         while True:
-            instructions = input('User: ')
-            self.generate_post(instructions)
+            try:
+                instructions = input('User: ')
+                self.generate_post(instructions)
+            except:
+                print("Bye!")
+                break

@@ -13,7 +13,7 @@ The small 8B version of Llama 3.1 proves to be even more accurate than its prede
 
 ## Size and Scalability
 
-Llama 3.1's smallest version comes in at approximately 5 Gigabytes in size, making it suitable for running on consumer-grade hardware with ease.
+Llama n3.1's smallest version comes in at approximately 5 Gigabytes in size, making it suitable for running on consumer-grade hardware with ease.
 
 ## Real-World Applications
 

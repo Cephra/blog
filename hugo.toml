@@ -25,6 +25,8 @@ enableRobotsTXT = true
 	author = 'christian frantzen'
 	description = 'christian frantzen - a software developer'
 
+	showReadingTime = true
+
 	[params.assets]
 		favicon	= 'favicon.ico'
 

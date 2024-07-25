@@ -2,7 +2,7 @@
 
 import argparse
 
-from blog_post_generator import BlogPostGenerator
+from interface import BlogGenerationInterface
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Blog Post Generator')
@@ -14,6 +14,5 @@ if __name__ == "__main__":
     parser.add_argument('-G', '--skip-generate', action='store_true', help='Skip post generation (optional)')
 
     args = parser.parse_args()
-
-    blog_post_generator = BlogPostGenerator(args.postname, model=args.model)
-    blog_post_generator.repl()
+    
+    BlogGenerationInterface(**vars(args)).cmdloop()

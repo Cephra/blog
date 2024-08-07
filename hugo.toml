@@ -52,6 +52,9 @@ enableRobotsTXT = true
 		name = "github"
 		url = "https://github.com/Cephra"
 	[[params.socialIcons]]
+		name = "twitter"
+		url = "https://x.com/Unknown4283428"
+	[[params.socialIcons]]
 		name = "email"
 		url = "mailto:cf@0x29a.me"
 	[[params.socialIcons]]

@@ -93,3 +93,14 @@ The Roman Empire's impact on world history is profound:
 
 The Roman Empire's enduring legacy testifies to its significance in shaping global politics, culture, and values. Its contributions continue to influence our world today, making it an essential topic of study and reflection for anyone interested in history and human civilization.
 ```
+
+**Roadmap**
+
+- [X] Basic blog post generation
+- [X] Summary generation
+- [X] Chat-like interface with commands
+- [ ] Undo, redo option
+- [ ] Prompt templates with logic
+- [ ] Integrated web search
+- [ ] Follow up on posts
+- [ ] Separate independent Agents for sections of the blogs

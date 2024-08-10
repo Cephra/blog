@@ -105,4 +105,4 @@ The Roman Empire's enduring legacy testifies to its significance in shaping glob
 - [ ] Prompt templates with logic
 - [ ] Integrated web search
 - [ ] Follow up on posts
-- [ ] Separate independent Agents for sections of the blogs
+- [ ] Separate independent Agents for sections of the posts

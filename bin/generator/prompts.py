@@ -1,13 +1,13 @@
-from jinja2 import Template
+from jinja2 import Environment, FileSystemLoader
+
+path = "prompts"
+template_env = Environment(loader=FileSystemLoader(path))
 
 # Used to generate prompts for the agent
 class PromptTemplate():
     def __init__(self, prompt_file_name: str, template_data: dict = dict()):
         self._template_data = template_data
-        # TODO allow multiple prompts (eg. array of prompt files) or maybe Jinja can do it
-        with open("./prompts/{}.txt".format(prompt_file_name)) as f:
-            template_body = f.read()
-            self._template = Template(template_body)
+        self._template = template_env.get_template("{}.txt".format(prompt_file_name))
     
     def generate(self):
         return self._template.render(self._template_data)

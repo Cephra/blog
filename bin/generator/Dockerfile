@@ -15,7 +15,8 @@ EOF
 # Use an official Python runtime as our base image
 FROM python:3-slim AS builder
 RUN <<EOF
-apt-get update apt-get install -y --no-install-recommends build-essential gcc
+apt-get update 
+apt-get install -y --no-install-recommends build-essential gcc
 python -m venv /opt/venv
 EOF
 ENV PATH="/opt/venv/bin:$PATH"

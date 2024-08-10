@@ -4,7 +4,7 @@ from history import History
 
 from blog_post import BlogPost
 
-from prompt import *
+from prompts import *
 
 class BaseAgent():
     def __init__(

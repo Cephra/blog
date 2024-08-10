@@ -99,6 +99,7 @@ The Roman Empire's enduring legacy testifies to its significance in shaping glob
 - [X] Basic blog post generation
 - [X] Summary generation
 - [X] Chat-like interface with commands
+- [X] Using jinja2 template engine for prompt templates
 - [ ] RAG across all posts
 - [ ] Undo, redo option
 - [ ] Prompt templates with logic

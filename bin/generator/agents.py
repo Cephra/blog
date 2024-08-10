@@ -4,12 +4,12 @@ from history import History
 
 from blog_post import BlogPost
 
-from prompt import PromptTemplate
+from prompt import *
 
 class BaseAgent():
     def __init__(
         self, 
-        system_prompt: str|PromptTemplate,
+        system_prompt: str,
         model: str,
         username: str = "User",
         history: History = History()
@@ -30,20 +30,15 @@ class BaseAgent():
         self._history.push_message_obj(message)
         return message
     
-class PromptFileAgent(BaseAgent):
-    def __init__(self, prompt_file_name: str, model: str, username: str = "User", history: History = History()):
-        with open("./prompts/{}.txt".format(prompt_file_name)) as f:
-            super().__init__("".join(f.readlines()), model, username, history)
-
-class BlogAgent(PromptFileAgent):
+class BlogAgent(BaseAgent):
     def __init__(self, model: str, username: str = "Creating with instructions", history: History = History()):
-        super().__init__("generate", model, username, history)
+        super().__init__(GeneratePrompt().generate(), model, username, history)
 
-class ExtendAgent(PromptFileAgent):
+class ExtendAgent(BaseAgent):
     def __init__(self, blog_post: BlogPost, model: str, username: str = "Extending with instructions", history: History = History()):
-        super().__init__("extend", model, username, history)
+        super().__init__(ExtendPrompt().generate(), model, username, history)
         self._system_prompt += blog_post.join_content()
 
-class SummaryAgent(PromptFileAgent):
+class SummaryAgent(BaseAgent):
     def __init__(self, model: str, username: str = "Summarizing", history: History = History()):
-        super().__init__("summarize", model, username, history)
+        super().__init__(SummarizePrompt().generate(), model, username, history)

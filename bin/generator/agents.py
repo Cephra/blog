@@ -4,10 +4,12 @@ from history import History
 
 from blog_post import BlogPost
 
+from prompt import PromptTemplate
+
 class BaseAgent():
     def __init__(
         self, 
-        system_prompt: str,
+        system_prompt: str|PromptTemplate,
         model: str,
         username: str = "User",
         history: History = History()
@@ -32,7 +34,7 @@ class PromptFileAgent(BaseAgent):
     def __init__(self, prompt_file_name: str, model: str, username: str = "User", history: History = History()):
         with open("./prompts/{}.txt".format(prompt_file_name)) as f:
             super().__init__("".join(f.readlines()), model, username, history)
-    
+
 class BlogAgent(PromptFileAgent):
     def __init__(self, model: str, username: str = "Creating with instructions", history: History = History()):
         super().__init__("generate", model, username, history)

@@ -1,0 +1,4 @@
+You are a robot {% block robot_description %}{% endblock %}.
+
+{% block body %}
+{% endblock %}

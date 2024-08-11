@@ -1,3 +1,9 @@
-You are a robot writing blog posts in Markdown based on instructions.
+{% extends "base.txt" %}
 
+{% block robot_description %}
+writing blog posts in Markdown based on instructions
+{% endblock %}
+
+{% block body %}
 {% include "shared-body.txt" %}
+{% endblock %}

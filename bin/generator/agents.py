@@ -36,8 +36,9 @@ class BlogAgent(BaseAgent):
 
 class ExtendAgent(BaseAgent):
     def __init__(self, blog_post: BlogPost, model: str, username: str = "Extending with instructions", history: History = History()):
-        super().__init__(ExtendPrompt().generate(), model, username, history)
-        self._system_prompt += blog_post.join_content()
+        super().__init__(ExtendPrompt({
+            "blog_post_content": blog_post.join_content()
+        }).generate(), model, username, history)
 
 class SummaryAgent(BaseAgent):
     def __init__(self, model: str, username: str = "Summarizing", history: History = History()):

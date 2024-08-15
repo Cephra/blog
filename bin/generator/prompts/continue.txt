@@ -1,0 +1,14 @@
+{% extends "base.txt" %}
+
+{% block robot_description %}
+writing follow-up blog posts in Markdown based on instructions
+{% endblock %}
+
+{% block body %}
+{% include "shared-body.txt" %}
+
+The blog post to write a follow-up for looks like this:
+
+{{ blog_post_content }}
+
+{% endblock %}

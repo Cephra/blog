@@ -1,6 +1,6 @@
 import cmd
 from blog_post import BlogPost
-from agents import BlogAgent, ExtendAgent, SummaryAgent
+from agents import BlogAgent, ExtendAgent, ContinueAgent, SummaryAgent
 
 class BlogGenerationInterface(cmd.Cmd):
     intro = 'Welcome to the AI-powered blog post generation interface!'
@@ -31,6 +31,15 @@ class BlogGenerationInterface(cmd.Cmd):
         print('Summarizing...')
         summary = SummaryAgent(model=self._model).chat(self._blog_post.join_content())["content"]
         self._blog_post.update_summary(summary)
+
+    def do_continue(self, arg):
+        'Create a continuation blog post based on another post'
+        print('Continuing...')
+        args = arg.split()
+        if len(args) < 1:
+            print("you must provide a post name")
+        base_post = BlogPost(args[0])
+        self._last_response = ContinueAgent(blog_post=base_post, model=self._model).chat(arg)["content"]
 
     def postcmd(self, stop, line):
         self._blog_post.update_content(

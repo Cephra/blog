@@ -37,13 +37,17 @@ class BlogAgent(BaseAgent):
 class ExtendAgent(BaseAgent):
     def __init__(self, blog_post: BlogPost, model: str, username: str = "Extending with instructions", history: History = History()):
         super().__init__(ExtendPrompt({
-            "blog_post_content": blog_post.join_content()
+            "blog_post_content": blog_post.join_content(),
+            "blog_post_title": blog_post.get_front_matter_var("title"),
+            "blog_post_date": blog_post.get_front_matter_var("date")
         }).generate(), model, username, history)
 
 class ContinueAgent(BaseAgent):
     def __init__(self, blog_post: BlogPost, model: str, username: str = "Continuing with instructions", history: History = History()):
         super().__init__(ContinuePrompt({
-            "blog_post_content": blog_post.join_content()
+            "blog_post_content": blog_post.join_content(),
+            "blog_post_title": blog_post.get_front_matter_var("title"),
+            "blog_post_date": blog_post.get_front_matter_var("date")
         }).generate(), model, username, history)
 
 class SummaryAgent(BaseAgent):

@@ -40,6 +40,12 @@ class ExtendAgent(BaseAgent):
             "blog_post_content": blog_post.join_content()
         }).generate(), model, username, history)
 
+class ContinueAgent(BaseAgent):
+    def __init__(self, blog_post: BlogPost, model: str, username: str = "Continuing with instructions", history: History = History()):
+        super().__init__(ContinuePrompt({
+            "blog_post_content": blog_post.join_content()
+        }).generate(), model, username, history)
+
 class SummaryAgent(BaseAgent):
     def __init__(self, model: str, username: str = "Summarizing", history: History = History()):
         super().__init__(SummarizePrompt().generate(), model, username, history)

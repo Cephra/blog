@@ -108,3 +108,13 @@ The Roman Empire's enduring legacy testifies to its significance in shaping glob
 - [ ] Integrated web search
 - [ ] Follow up on posts
 - [ ] Separate independent Agents for sections of the posts
+
+**Feedback**
+
+Don't hesitate to create issues if you have feature requests or bug reports. Your input is valuable in helping me improve this project, and I'm always eager to hear your thoughts! Whether it's a suggestion for a new feature or a report of an issue that's affecting you, please don't hesitate to reach out. I'll do my best to address them promptly and make this project even better for everyone.
+
+**Issue Guidelines**
+
+* Please include as much detail as possible when submitting an issue.
+* If you're reporting a bug, try to provide steps to reproduce it so I can investigate quickly.
+* For feature requests, let me know what you'd like to see and why.

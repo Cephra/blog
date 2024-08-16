@@ -34,21 +34,35 @@ class BlogAgent(BaseAgent):
     def __init__(self, model: str, username: str = "Creating with instructions", history: History = History()):
         super().__init__(GeneratePrompt().generate(), model, username, history)
 
-class ExtendAgent(BaseAgent):
-    def __init__(self, blog_post: BlogPost, model: str, username: str = "Extending with instructions", history: History = History()):
-        super().__init__(ExtendPrompt({
+class ExtendOrContinueAgent(BaseAgent):
+    def extract_metadata(self, blog_post: BlogPost) -> dict:
+        return {
             "blog_post_content": blog_post.join_content(),
             "blog_post_title": blog_post.get_front_matter_var("title"),
             "blog_post_date": blog_post.get_front_matter_var("date")
-        }).generate(), model, username, history)
+        }
 
-class ContinueAgent(BaseAgent):
+class ExtendAgent(ExtendOrContinueAgent):
+    def __init__(self, blog_post: BlogPost, model: str, username: str = "Extending with instructions", history: History = History()):
+        super().__init__(
+            ExtendPrompt(
+                self.extract_metadata(blog_post)
+            ).generate(),
+            model,
+            username,
+            history
+        )
+
+class ContinueAgent(ExtendOrContinueAgent):
     def __init__(self, blog_post: BlogPost, model: str, username: str = "Continuing with instructions", history: History = History()):
-        super().__init__(ContinuePrompt({
-            "blog_post_content": blog_post.join_content(),
-            "blog_post_title": blog_post.get_front_matter_var("title"),
-            "blog_post_date": blog_post.get_front_matter_var("date")
-        }).generate(), model, username, history)
+        super().__init__(
+            ContinuePrompt(
+                self.extract_metadata(blog_post)
+            ).generate(),
+            model,
+            username,
+            history
+        )
 
 class SummaryAgent(BaseAgent):
     def __init__(self, model: str, username: str = "Summarizing", history: History = History()):

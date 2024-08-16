@@ -56,12 +56,15 @@ class BlogPost():
                 end_line = min(len(self._content), end_line - self._front_matter_offset)
         return start_line, end_line
 
+    def _front_matter_to_toml(self) -> str:
+        return tomli_w.dumps(self._front_matter)
+    
+    def get_front_matter_var(self, key: str):
+        return self._front_matter[key]
+
     def join_content(self, start_line: int = None, end_line: int = None) -> str:
         start_line, end_line = self._adjust_line_numbers(start_line, end_line)
         return ''.join(self._content[start_line:end_line])
-
-    def front_matter_to_toml(self) -> str:
-        return tomli_w.dumps(self._front_matter)
 
     def update_content(
                 self,
@@ -81,7 +84,7 @@ class BlogPost():
     def save(self) -> None:
         with open(self._postfile, 'w') as file:
             if self._front_matter:
-                file.write("+++\n{}+++\n".format(self.front_matter_to_toml()))
+                file.write("+++\n{}+++\n".format(self._front_matter_to_toml()))
             if self._content:
                 file.write(self.join_content())
         if self.is_fresh:

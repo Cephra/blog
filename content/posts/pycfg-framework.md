@@ -29,6 +29,14 @@ This simplified vector math was particularly useful in HL2DM scripting, where ca
 - **Personal Learning Experience:** Pycfg served as an educational project where I experimented with combining Python with HL2DM scripting.
 - **Early Community Engagement:** Although it was only used by a handful of people, including myself, pycfg showed me the potential for community involvement and shared learning in game development.
 
+#### Showcase: Screenshot
+
+Below is an example screenshot demonstrating what can be achieved using pycfg for Half-Life 2 Deathmatch scripting.
+
+![Pycfg in Action](https://fs.0x29a.me/static/hl2dm.webp)
+
+You can see a ball of blastdoors and a tube of rollermines, with a color fade. I've used trig functions to achieve this.
+
 ### Legacy
 
 Pycfg remains a nostalgic reminder of my early days as a hobbyist developer. It highlights how even small projects can demonstrate connections between one's interests and professional pursuits. The lessons learned from pycfg continue to influence my approach to software development today, emphasizing the value of experimentation, community engagement, and embracing new tools and technologies.

@@ -19,8 +19,8 @@ With pycfg, users could tap into some basic features provided by Python, integra
 For example, adding two vectors together could be as simple as using the `+` operator:
 
 ```python
-v1 = Vector(1, 2)
-v2 = Vector(3, 4)
+v1 = Vec(1, 2)
+v2 = Vec(3, 4)
 result = v1 + v2
 ```
 

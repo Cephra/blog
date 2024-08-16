@@ -1,6 +1,7 @@
 +++
 title = "Pycfg Framework"
 date = 2024-08-16 19:35:14+00:00
+summary = "I talk about my old hobbyist project pycfg, a Pythonic framework for Half-Life 2 Deathmatch scripting that simplified complex scripts with features like vector classes and operator overloading."
 +++
 ## Pycfg: A Pythonic Approach to Half-Life 2 Deathmatch Scripting
 
@@ -44,3 +45,4 @@ Pycfg remains a nostalgic reminder of my early days as a hobbyist developer. It 
 ### Resources
 
 For those interested in exploring pycfg further, I invite you to visit its GitHub project page: https://github.com/Cephra/pycfg
+

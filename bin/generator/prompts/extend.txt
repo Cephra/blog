@@ -7,8 +7,6 @@ extending or reworking blog posts in Markdown based on instructions
 {% block body %}
 {% include "shared-body.txt" %}
 
-The blog post looks like this:
-
-{{ blog_post_content }}
+{% include "blog-post.txt" %}
 
 {% endblock %}

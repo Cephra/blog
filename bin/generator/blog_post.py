@@ -59,8 +59,15 @@ class BlogPost():
     def _front_matter_to_toml(self) -> str:
         return tomli_w.dumps(self._front_matter)
     
-    def get_front_matter_var(self, key: str):
+    def _get_front_matter_var(self, key: str):
         return self._front_matter[key]
+
+    def extract_metadata(self) -> dict:
+        return {
+            "blog_post_content": self.join_content(),
+            "blog_post_title": self._get_front_matter_var("title"),
+            "blog_post_date": self._get_front_matter_var("date").strftime("%A %B %d, %Y")
+        }
 
     def join_content(self, start_line: int = None, end_line: int = None) -> str:
         start_line, end_line = self._adjust_line_numbers(start_line, end_line)

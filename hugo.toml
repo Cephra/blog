@@ -58,6 +58,9 @@ enableRobotsTXT = true
 		name = "linkedin"
 		url = "https://www.linkedin.com/in/christian-frantzen-2b3131323/"
 	[[params.socialIcons]]
+		name = "xing"
+		url = "https://www.xing.com/profile/Christian_Frantzen"
+	[[params.socialIcons]]
 		name = "email"
 		url = "mailto:cf@0x29a.me"
 	[[params.socialIcons]]

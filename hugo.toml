@@ -55,6 +55,9 @@ enableRobotsTXT = true
 		name = "twitter"
 		url = "https://x.com/Unknown4283428"
 	[[params.socialIcons]]
+		name = "linkedin"
+		url = "https://www.linkedin.com/in/christian-frantzen-2b3131323/"
+	[[params.socialIcons]]
 		name = "email"
 		url = "mailto:cf@0x29a.me"
 	[[params.socialIcons]]

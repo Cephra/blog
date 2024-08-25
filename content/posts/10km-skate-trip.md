@@ -1,6 +1,7 @@
 +++
 title = "10km Skate Trip"
 date = 2024-08-25 20:00:04+00:00
+summary = "I went on a 10km skate trip with friends, cruising through trails and enjoying each other's company. It was a perfect day of freedom and connection with nature."
 +++
 ## Sunday Skate Adventure: Freedom on Wheels
 ### Cruising with Friends
@@ -18,3 +19,4 @@ It was dope to see how our different setups worked together, creating this littl
 ### Conclusion
 
 That 10km skate trip flew by too fast, but it reminded me why I love skating so much. Whether you're on a longboard, cruiser, or whatever, there's something special about feeling free and connected to nature. I'm hyped for the next adventure with these guys - all about good times, personal growth, and just enjoying the ride.
+

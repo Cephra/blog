@@ -11,9 +11,13 @@ class PromptTemplate():
         self._template_data = template_data
         self._template_data["date"] = date.today().strftime("%A %B %d, %Y")
         self._template = template_env.get_template("{}.txt".format(prompt_file_name))
+        self._debug = False
     
     def generate(self):
-        return self._template.render(self._template_data)
+        rendered_prompt = self._template.render(self._template_data)
+        if self._debug:
+            print(rendered_prompt)
+        return rendered_prompt
 
 # Used to generate a new blog post
 class GeneratePrompt(PromptTemplate):
@@ -34,3 +38,13 @@ class SummarizePrompt(PromptTemplate):
 class ContinuePrompt(PromptTemplate):
     def __init__(self, template_data: dict = dict()):
         super().__init__("continue", template_data)
+
+if __name__ == "__main__":
+    rendered_prompt = GeneratePrompt({"title": "Test Title"}).generate()
+    print(rendered_prompt)
+    rendered_prompt = ExtendPrompt({"title": "Test Title", "date": date.today().strftime("%A %B %d, %Y")}).generate()
+    print(rendered_prompt)
+    rendered_prompt = SummarizePrompt({"title": "Test Title", "date": date.today().strftime("%A %B %d, %Y"), "summary": "This is a test summary."}).generate()
+    print(rendered_prompt)
+    rendered_prompt = ContinuePrompt({"title": "Test Title", "date": date.today().strftime("%A %B %d, %Y"), "summary": "This is a test summary.", "continue_text": "This is a test continue text."}).generate()
+    print(rendered_prompt)

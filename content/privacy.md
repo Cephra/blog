@@ -25,7 +25,7 @@ Your personal data is used only for the purpose of providing you with the conten
 **Retention Period**
 --------------------
 
-I retain your personal data for as long as necessary to provide you with the services and content on my blog or subdomains. Once your data is no longer needed, it will be deleted or anonymized.
+I retain your personal data for a period of up to 6 months from the time of collection, as long as necessary to provide you with the services and content on my blog or subdomains. Once your data is no longer needed, it will be deleted or anonymized.
 
 **Data Subject Rights**
 ----------------------

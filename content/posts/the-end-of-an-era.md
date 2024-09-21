@@ -1,6 +1,7 @@
 +++
 title = "The End of an Era"
 date = 2024-09-20 21:37:50+00:00
+summary = "I discuss my disappointment with Rockstar Games' decision to discontinue GTA Online on Linux due to the addition of an anti-cheat system. I also mention a possible workaround using dual boot, but consider it inconvenient and defeating the purpose of a dedicated gaming PC running on Linux."
 +++
 ## No More GTA Online on Linux
 
@@ -31,3 +32,4 @@ While a dual boot setup with Windows is technically possible, it's an inconvenie
 ### A Legacy Frozen in Time
 
 As a final note, it's worth mentioning that many GTA Online players on Linux had developed strong bonds within their communities, shared countless hours of gameplay experiences, and created lasting memories together. These moments will now forever be frozen in time as the Linux version of GTA Online becomes just another relic of the past.
+

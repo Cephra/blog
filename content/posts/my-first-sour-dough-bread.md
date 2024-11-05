@@ -1,7 +1,6 @@
 +++
 title = "My First Sour Dough Bread"
 date = 2024-11-05 17:18:46+00:00
-draft = true
 summary = "I created my first successful sourdough starter from scratch. \nMaking fresh sourdough bread is a rewarding experience that combines creativity from both baking and coding."
 +++
 ## A Sourdough Adventure Begins

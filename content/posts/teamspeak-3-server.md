@@ -9,7 +9,7 @@ Hey friends, just wanted to mention that I've got our TeamSpeak 3 server up and 
 
 If you want to join in on some virtual catch-ups with me and the others, feel free to hop on over. We'd love to have you drop by and say hi.
 
-You can find it at: [0x29a.me:25565](ts3server://0x29a.me?port=25565)
+You can find it at: [0x29a.me:4711](ts3server://0x29a.me?port=4711)
 
 Once you're in, we can chat about our lives, make plans, or just shoot the breeze. This is a casual space, so feel free to hang out and relax.
 

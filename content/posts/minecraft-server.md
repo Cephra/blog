@@ -17,7 +17,7 @@ So come on over and join us for some fun! We've been waiting for a while now to 
 **Server Details:**
 
 * IP Address: `0x29a.me`
-* Port: 4711
+* Port: 25565
 * Game Mode: Survival/PvP
 
 Don't miss out on the action - connect to our server today and start exploring the world with us!

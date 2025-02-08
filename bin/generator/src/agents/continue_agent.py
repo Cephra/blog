@@ -1,9 +1,6 @@
-from app.history import History
-
-from app.blog_post import BlogPost
-
 from .base import BaseAgent
-
+from app.blog_post import BlogPost
+from app.history import History
 from app.prompts import ContinuePrompt
 
 class ContinueAgent(BaseAgent):

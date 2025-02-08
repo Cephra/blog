@@ -1,7 +1,5 @@
-from app.history import History
-
 from . import BaseAgent
-
+from app.history import History
 from app.prompts import SummarizePrompt
 
 class SummaryAgent(BaseAgent):

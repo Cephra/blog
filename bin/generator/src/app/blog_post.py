@@ -1,9 +1,8 @@
+from app.const import WORKSPACE
 import os
 import subprocess
-import tomllib
 import tomli_w
-
-from app.const import WORKSPACE
+import tomllib
 
 class BlogPost():
     def __init__(self, postname: str) -> None:

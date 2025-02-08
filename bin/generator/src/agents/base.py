@@ -1,6 +1,5 @@
-import ollama
-
 from app.history import History
+import ollama
 
 class BaseAgent():
     def __init__(

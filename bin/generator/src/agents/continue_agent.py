@@ -1,4 +1,4 @@
-from .base import BaseAgent
+from . import BaseAgent
 from app.blog_post import BlogPost
 from app.history import History
 from app.prompts import ContinuePrompt

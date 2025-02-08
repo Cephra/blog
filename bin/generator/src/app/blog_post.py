@@ -3,7 +3,7 @@ import subprocess
 import tomllib
 import tomli_w
 
-from const import WORKSPACE
+from app.const import WORKSPACE
 
 class BlogPost():
     def __init__(self, postname: str) -> None:

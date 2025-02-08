@@ -2,7 +2,7 @@ from datetime import date
 
 from jinja2 import Environment, FileSystemLoader
 
-path = "prompts"
+path = "../prompts"
 template_env = Environment(loader=FileSystemLoader(path))
 
 # Used to generate prompts for the agent

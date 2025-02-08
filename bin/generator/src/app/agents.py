@@ -1,8 +1,8 @@
 import ollama
 
-from history import History
+from app.history import History
 
-from blog_post import BlogPost
+from app.blog_post import BlogPost
 
 from prompts import *
 

@@ -1,6 +1,6 @@
 import cmd
-from blog_post import BlogPost
-from agents import BlogAgent, ExtendAgent, ContinueAgent, SummaryAgent
+from app.blog_post import BlogPost
+from app.agents import BlogAgent, ExtendAgent, ContinueAgent, SummaryAgent
 
 class BlogGenerationInterface(cmd.Cmd):
     intro = 'Welcome to the AI-powered blog post generation interface!'

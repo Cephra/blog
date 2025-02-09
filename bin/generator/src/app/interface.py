@@ -12,12 +12,11 @@ class BlogGenerationInterface(cmd.Cmd):
         super().__init__()
         self._postname = kwargs["postname"]
         self._model = kwargs["model"]
-        self._cmd_agent = CmdAgent()
+        self._cmd_agent = CmdAgent(self)
         self.prompt = self._prompt()
         
     def precmd(self, line):
         self._blog_post = BlogPost(self._postname)
-        self._cmd_agent._blog_post = self._blog_post
         return line
     
     def do_summarize(self, arg):

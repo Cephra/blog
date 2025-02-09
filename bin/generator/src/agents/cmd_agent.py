@@ -2,17 +2,15 @@ from . import BaseAgent, BlogAgent, ExtendAgent
 
 class CmdAgent(BaseAgent):
     def create_post(self, instructions: str) -> str:
-        post = BlogAgent().chat(instructions)["content"]
+        post = self._interface._last_response = BlogAgent().chat(instructions)["content"]
         return f'Successfully generated the following post:\n{post}\n'
 
     def edit_post(self, instructions: str) -> str:
-        post = ExtendAgent(self._interface._blog_post).chat(instructions)["content"]
+        post = self._interface._last_response = ExtendAgent(self._interface._blog_post).chat(instructions)["content"]
         return f'Successfully edited the post and it now looks like:\n{post}\n'
         
     def __init__(self, interface):
-        super().__init__('You are a chat bot helping the user control a blog post generator application. You must use tools to interact with the application. After every tool call you must process the response and return it to the user.', options={
-            'temperature': 0,
-        })
+        super().__init__('You are a chat bot helping the user control a blog post generator application. You must use tools to interact with the application. After every tool call you must process the response and return it to the user.')
         self._interface = interface
         self.tools = [
             {

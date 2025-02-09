@@ -4,7 +4,7 @@ from app.history import History
 from prompts import ExtendPrompt
 
 class ExtendAgent(BaseAgent):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, blog_post: BlogPost, *args, **kwargs):
         super().__init__(
             ExtendPrompt(
                 blog_post.extract_metadata()

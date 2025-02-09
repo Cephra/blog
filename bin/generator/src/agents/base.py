@@ -7,13 +7,14 @@ class BaseAgent():
         system_prompt: str,
         model: str = 'llama3.1',
         username: str = "User",
+        options: dict = {},
         history: History = History()
     ):
         self._system_prompt = system_prompt
-        print(self._system_prompt)
         self._model = model
         self._username = username
         self._history = history
+        self._options = options
         self.tools = []
     
     def _handle_tools(self, response):
@@ -34,6 +35,10 @@ class BaseAgent():
             "model": self._model, 
             "messages": self._history.get_with_sys(self._system_prompt),
         }
+        
+        # add options if available in subclass
+        if self._options:
+            args["options"] = self._options
 
         # add tools if available in subclass
         if self.tools:

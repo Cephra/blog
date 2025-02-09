@@ -1,6 +1,6 @@
 from . import BaseAgent
 from app.history import History
-from app.prompts import GeneratePrompt
+from prompts import GeneratePrompt
 
 class BlogAgent(BaseAgent):
     def __init__(self, model: str, username: str = "Creating with instructions", history: History = History()):

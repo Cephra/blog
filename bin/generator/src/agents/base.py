@@ -5,7 +5,7 @@ class BaseAgent():
     def __init__(
         self, 
         system_prompt: str,
-        model: str,
+        model: str = 'llama3.1',
         username: str = "User",
         history: History = History()
     ):

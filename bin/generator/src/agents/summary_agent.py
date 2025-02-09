@@ -1,6 +1,6 @@
 from . import BaseAgent
 from app.history import History
-from app.prompts import SummarizePrompt
+from prompts import SummarizePrompt
 
 class SummaryAgent(BaseAgent):
     def __init__(self, model: str, username: str = "Summarizing", history: History = History()):

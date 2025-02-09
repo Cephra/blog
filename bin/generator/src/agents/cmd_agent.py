@@ -24,7 +24,9 @@ class CmdAgent(BaseAgent):
         self._last_response = ContinueAgent(blog_post=base_post, model=self._model).chat(arg)["content"]
         
     def __init__(self, interface):
-        super().__init__('You are a chat bot helping the user control a blog post generator application. You must use tools to interact with the application. After every tool call you must process the response and return it to the user.')
+        super().__init__('You are a chat bot helping the user control a blog post generator application. You must use tools to interact with the application. After every tool call you must process the response and return it to the user.', options={
+            'num_ctx': 8*1024,
+        })
         self._interface = interface
         self.tools = [
             {

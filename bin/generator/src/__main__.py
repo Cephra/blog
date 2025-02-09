@@ -2,7 +2,7 @@
 
 import argparse
 
-from interface import BlogGenerationInterface
+from app.interface import BlogGenerationInterface
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Blog Post Generator')

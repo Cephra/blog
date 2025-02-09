@@ -4,15 +4,20 @@ from agents import *
 
 class BlogGenerationInterface(cmd.Cmd):
     intro = 'Welcome to the AI-powered blog post generation interface!'
-    prompt = 'blog> '
+    
+    def _prompt(self):
+        return f"blog({self._postname})> "
     
     def __init__(self, *args, **kwargs):
         super().__init__()
         self._postname = kwargs["postname"]
         self._model = kwargs["model"]
+        self._cmd_agent = CmdAgent()
+        self.prompt = self._prompt()
         
     def precmd(self, line):
         self._blog_post = BlogPost(self._postname)
+        self._cmd_agent._blog_post = self._blog_post
         return line
     
     def do_generate(self, arg):
@@ -53,7 +58,7 @@ class BlogGenerationInterface(cmd.Cmd):
         if line == 'EOF':
             return self.do_bye('')
         else:
-            print("I don't understand that command.")
+            print(self._cmd_agent.chat(line))
     
 if __name__ == '__main__':
     BlogGenerationInterface().cmdloop()

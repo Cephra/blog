@@ -1,4 +1,5 @@
 from app.history import History
+from ollama import Message
 import ollama
 
 class BaseAgent():
@@ -13,10 +14,22 @@ class BaseAgent():
         self._model = model
         self._username = username
         self._history = history
+        self.tools = []
     
-    def chat(self, prompt: str) -> str:
-        print("{}: {}".format(self._username, prompt))
-        self._history.push_message("user", prompt)
+    def _handle_tools(self, response):
+        for tool in response.message.tool_calls:
+            result = None
+            if hasattr(self, tool.function.name):
+                tool_callable = getattr(self, tool.function.name)
+                if callable(tool_callable):
+                    args = tool.function.arguments
+                    result = tool_callable(**args)
+            self._history.push_tool(tool.function.name, result or "")
+    
+    def chat(self, prompt: str|None) -> str:
+        if prompt is not None:
+            print("{}: {}".format(self._username, prompt))
+            self._history.push_message("user", prompt)
         args = {
             "model": self._model, 
             "messages": self._history.get_with_sys(self._system_prompt),
@@ -28,5 +41,12 @@ class BaseAgent():
 
         response = ollama.chat(**args)
         message = response['message']
-        self._history.push_message_obj(message)
+        self._history.push_message_obj(message.model_dump())
+        
+        if prompt is not None and response.message.tool_calls:
+            print(response.message.tool_calls)
+            self._handle_tools(response)
+            print(self._history.get_with_sys(self._system_prompt))
+            return self.chat(None)
+
         return message

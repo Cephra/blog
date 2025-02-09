@@ -20,14 +20,6 @@ class BlogGenerationInterface(cmd.Cmd):
         self._cmd_agent._blog_post = self._blog_post
         return line
     
-    def do_generate(self, arg):
-        'Generate a blog post'
-        self._last_response = BlogAgent(model=self._model).chat(arg)["content"]
-        
-    def do_extend(self, arg):
-        'Extend the blog post with more content'
-        self._last_response = ExtendAgent(blog_post=self._blog_post, model=self._model).chat(arg)["content"]
-
     def do_summarize(self, arg):
         'Generate a blog post summary'
         summary = SummaryAgent(model=self._model).chat(self._blog_post.join_content())["content"]
@@ -58,7 +50,8 @@ class BlogGenerationInterface(cmd.Cmd):
         if line == 'EOF':
             return self.do_bye('')
         else:
-            print(self._cmd_agent.chat(line))
+            cmd_res = self._cmd_agent.chat(line)
+            print(cmd_res)
     
 if __name__ == '__main__':
     BlogGenerationInterface().cmdloop()

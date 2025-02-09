@@ -1,7 +1,6 @@
 +++
 title = "New Natural Language Interface"
 date = 2025-02-09 22:49:31+00:00
-draft = true
 summary = "I improved my CLI AI blog post generator by adding a natural language interface that allows users to interact with the program in a conversational manner. The new interface leverages Large Language Model capabilities for efficient and seamless workflow."
 +++
 ## New Interface Enhances User Experience

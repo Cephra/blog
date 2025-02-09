@@ -13,6 +13,7 @@ class BaseAgent():
         self._system_prompt = system_prompt
         self._model = model
         self._username = username
+        self._quiet = False
         self._history = history
         self._options = options
         self.tools = []
@@ -29,29 +30,31 @@ class BaseAgent():
     
     def chat(self, prompt: str|None) -> str:
         if prompt is not None:
-            print("{}: {}".format(self._username, prompt))
+            if not self._quiet:
+                print("{}: {}".format(self._username, prompt))
             self._history.push_message("user", prompt)
+
         args = {
             "model": self._model, 
             "messages": self._history.get_with_sys(self._system_prompt),
         }
-        
         # add options if available in subclass
         if self._options:
             args["options"] = self._options
-
         # add tools if available in subclass
         if self.tools:
             args["tools"] = self.tools
             
-        response = ollama.chat(**args)
-        message = response['message']
+        message = None
+        while True:
+            response = ollama.chat(**args)
+            message = response['message']
+            if prompt is not None or len(message.content) > 0:
+                break
         self._history.push_message_obj(message.model_dump())
         
         if prompt is not None and response.message.tool_calls:
-            print(response.message.tool_calls)
             self._handle_tools(response)
-            print(self._history.get_with_sys(self._system_prompt))
             return self.chat(None)
 
         return message

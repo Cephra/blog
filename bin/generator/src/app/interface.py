@@ -37,7 +37,7 @@ class BlogGenerationInterface(cmd.Cmd):
             return self.do_bye('')
         else:
             cmd_res = self._cmd_agent.chat(line)
-            print(cmd_res)
+            print(f'Assistant: {cmd_res.content}')
     
 if __name__ == '__main__':
     BlogGenerationInterface().cmdloop()

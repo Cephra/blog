@@ -18,4 +18,4 @@ class History():
         self._history.append(message)
         
     def get_last(self) -> str:
-        return self._history[-1]['content']
+        return self._history[-1]

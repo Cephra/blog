@@ -1,5 +1,4 @@
 from app.history import History
-from ollama import Message
 import ollama
 
 class BaseAgent():
@@ -11,6 +10,7 @@ class BaseAgent():
         history: History = History()
     ):
         self._system_prompt = system_prompt
+        print(self._system_prompt)
         self._model = model
         self._username = username
         self._history = history
@@ -38,7 +38,7 @@ class BaseAgent():
         # add tools if available in subclass
         if self.tools:
             args["tools"] = self.tools
-
+            
         response = ollama.chat(**args)
         message = response['message']
         self._history.push_message_obj(message.model_dump())

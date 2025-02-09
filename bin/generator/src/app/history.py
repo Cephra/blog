@@ -1,6 +1,6 @@
 class History():
     def __init__(self):
-        self._history = []
+        self._history: list = []
     
     def get_with_sys(self, sys_prompt: str):
         return [ {

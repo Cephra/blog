@@ -40,7 +40,8 @@ class BlogGenerationInterface(cmd.Cmd):
         self._blog_post.update_content(
             self._last_response if hasattr(self, '_last_response') else self._blog_post.join_content()
         )
-        self._blog_post.save()
+        if not stop:
+            self._blog_post.save()
         return stop
         
     def do_bye(self, arg):

@@ -17,10 +17,16 @@ class BaseAgent():
     def chat(self, prompt: str) -> str:
         print("{}: {}".format(self._username, prompt))
         self._history.push_message("user", prompt)
-        response = ollama.chat(
-            model=self._model,
-            messages=self._history.get_with_sys(self._system_prompt)
-        )
+        args = {
+            "model": self._model, 
+            "messages": self._history.get_with_sys(self._system_prompt),
+        }
+
+        # add tools if available in subclass
+        if self.tools:
+            args["tools"] = self.tools
+
+        response = ollama.chat(**args)
         message = response['message']
         self._history.push_message_obj(message)
         return message

@@ -67,6 +67,9 @@ class CmdAgent(BaseAgent):
                 'function': {
                     'name': 'summarize_post',
                     'description': 'Create a summary of the blog post',
+                    'parameters': {
+                        'type': 'object',
+                    },
                 },
             }
         ]

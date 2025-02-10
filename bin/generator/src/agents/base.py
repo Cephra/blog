@@ -27,6 +27,26 @@ class BaseAgent():
                     args = tool.function.arguments
                     result = tool_callable(**args)
             self._history.push_tool(tool.function.name, result or "")
+            
+    def _validate_message(self, message, tool_message) -> bool:
+        print(f'Validating message: {message}')
+        print(f'Tool message: {tool_message}')
+        if tool_message:
+            print("tool message")
+            return True if len(message.content) > 0 else False
+        else:
+            if message.tool_calls:
+                available_tools = [tool["function"]["name"] for tool in self.tools]
+                print(available_tools)
+                for call in message.tool_calls:
+                    if call.function.name not in available_tools:
+                        return False
+                return True
+            elif len(message.content) == 0:
+                return False
+            else:
+                print("bingo")
+                return True
     
     def chat(self, prompt: str|None) -> str:
         if prompt is not None:
@@ -46,17 +66,11 @@ class BaseAgent():
             args["tools"] = self.tools
             
         message = None
-        retry = False
-        while True:
+        message_valid = False
+        while not message_valid:
             response = ollama.chat(**args)
-            message = response['message']
-            if prompt is None and 0 == len(message.content):
-                print('.', end='', flush=True)
-                retry = True
-            else:
-                if retry:
-                    print('')
-                break
+            message = response.message
+            message_valid = self._validate_message(message, True if not prompt else False)
         self._history.push_message_obj(message.model_dump())
         
         if prompt is not None and response.message.tool_calls:

@@ -46,10 +46,16 @@ class BaseAgent():
             args["tools"] = self.tools
             
         message = None
+        retry = False
         while True:
             response = ollama.chat(**args)
             message = response['message']
-            if prompt is not None or len(message.content) > 0:
+            if prompt is None and 0 == len(message.content):
+                print('.', end='', flush=True)
+                retry = True
+            else:
+                if retry:
+                    print('')
                 break
         self._history.push_message_obj(message.model_dump())
         

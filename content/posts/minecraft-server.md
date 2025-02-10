@@ -1,6 +1,7 @@
 +++
 title = "Minecraft Server"
 date = 2025-02-02 09:51:57+00:00
+summary = "I'm excited to share my new Minecraft server, where I've been playing with friends since November. The community is fantastic, and we have endless possibilities for fun and excitement."
 +++
 ## Introducing Our Brand New Minecraft Server!
 
@@ -21,3 +22,4 @@ So come on over and join us for some fun! We've been waiting for a while now to 
 * Game Mode: Survival/PvP
 
 Don't miss out on the action - connect to our server today and start exploring the world with us!
+

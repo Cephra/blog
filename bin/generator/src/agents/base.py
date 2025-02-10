@@ -29,15 +29,11 @@ class BaseAgent():
             self._history.push_tool(tool.function.name, result or "")
             
     def _validate_message(self, message, tool_message) -> bool:
-        print(f'Validating message: {message}')
-        print(f'Tool message: {tool_message}')
         if tool_message:
-            print("tool message")
             return True if len(message.content) > 0 else False
         else:
             if message.tool_calls:
                 available_tools = [tool["function"]["name"] for tool in self.tools]
-                print(available_tools)
                 for call in message.tool_calls:
                     if call.function.name not in available_tools:
                         return False
@@ -45,7 +41,6 @@ class BaseAgent():
             elif len(message.content) == 0:
                 return False
             else:
-                print("bingo")
                 return True
     
     def chat(self, prompt: str|None) -> str:

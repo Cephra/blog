@@ -8,13 +8,13 @@ class BaseAgent():
         model: str = 'llama3.1',
         username: str = "User",
         options: dict = {},
-        history: History = History()
+        history: History = None
     ):
         self._system_prompt = system_prompt
         self._model = model
         self._username = username
         self._quiet = False
-        self._history = history
+        self._history = history if history else History()
         self._options = options
         self.tools = []
     

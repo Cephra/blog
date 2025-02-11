@@ -1,6 +1,5 @@
 from . import BaseAgent
 from app.blog_post import BlogPost
-from app.history import History
 from prompts import ContinuePrompt
 
 class ContinueAgent(BaseAgent):

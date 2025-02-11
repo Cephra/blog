@@ -1,5 +1,4 @@
 from . import BaseAgent
-from app.history import History
 from prompts import GeneratePrompt
 
 class BlogAgent(BaseAgent):

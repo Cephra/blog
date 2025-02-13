@@ -1,4 +1,5 @@
 from . import BaseAgent, BlogAgent, ExtendAgent, SummaryAgent
+from prompts import PromptTemplate
 
 class CmdAgent(BaseAgent):
     def create_post(self, instructions: str) -> str:
@@ -24,7 +25,7 @@ class CmdAgent(BaseAgent):
         self._last_response = ContinueAgent(blog_post=base_post, model=self._model).chat(arg)["content"]
         
     def __init__(self, interface):
-        super().__init__('You are a chat bot helping the user control a blog post generator application. You must use tools to interact with the application. You must not use any other tools than those specified. After every tool call you must process the response and return it to the user.', options={
+        super().__init__(PromptTemplate(prompt_file_name='cmd').generate(), options={
             'num_ctx': 4*1024,
         })
         self._quiet = True

@@ -1,6 +1,6 @@
 from . import BaseAgent
-from prompts import GeneratePrompt
+from prompts import PromptTemplate
 
 class BlogAgent(BaseAgent):
     def __init__(self, *args, **kwargs):
-        super().__init__(GeneratePrompt().generate(), *args, **kwargs)
+        super().__init__(PromptTemplate(prompt_file_name='generate').generate(), *args, **kwargs)

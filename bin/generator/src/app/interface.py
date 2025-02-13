@@ -27,6 +27,10 @@ class BlogGenerationInterface(cmd.Cmd):
             self._blog_post.save()
         return stop
         
+    def do_dbg(self, arg):
+        'Print debug'
+        print(self._cmd_agent)
+
     def do_bye(self, arg):
         'Exit the program'
         print('Bye!')

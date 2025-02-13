@@ -2,20 +2,23 @@ from app.history import History
 import ollama
 
 class BaseAgent():
+    def __str__(self):
+        return str(self._history)
+
     def __init__(
         self, 
         system_prompt: str,
         model: str = 'llama3.1',
         username: str = "User",
-        options: dict = {},
+        options: dict = None,
         history: History = None
     ):
         self._system_prompt = system_prompt
         self._model = model
         self._username = username
         self._quiet = False
-        self._history = history if history else History()
-        self._options = options
+        self._history = History() if history is None else history
+        self._options = {} if options is None else options 
         self.tools = []
     
     def _handle_tools(self, response):

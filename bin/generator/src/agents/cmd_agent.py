@@ -26,7 +26,7 @@ class CmdAgent(BaseAgent):
         
     def __init__(self, interface):
         super().__init__(PromptTemplate(prompt_file_name='cmd').generate(), options={
-            'num_ctx': 4*1024,
+            'num_ctx': 8*1024,
         })
         self._quiet = True
         self._interface = interface

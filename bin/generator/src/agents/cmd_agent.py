@@ -25,7 +25,7 @@ class CmdAgent(BaseAgent):
         self._last_response = ContinueAgent(blog_post=base_post, model=self._model).chat(arg)["content"]
         
     def __init__(self, interface):
-        super().__init__(PromptTemplate(prompt_file_name='cmd').generate(), options={
+        super().__init__(PromptTemplate(prompt_file_name='cmd'), options={
             'num_ctx': 8*1024,
         })
         self._quiet = True

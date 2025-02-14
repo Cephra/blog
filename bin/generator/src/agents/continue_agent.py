@@ -8,7 +8,7 @@ class ContinueAgent(BaseAgent):
             ContinuePrompt(
                 prompt_file_name='continue',
                 template_data=blog_post.extract_metadata()
-            ).generate(),
+            ),
             *args,
             **kwargs
         )

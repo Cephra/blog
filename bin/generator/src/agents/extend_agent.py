@@ -7,7 +7,11 @@ class ExtendAgent(BaseAgent):
         super().__init__(
             PromptTemplate(
                 prompt_file_name='extend',
-                template_data=blog_post.extract_metadata()
-            ).generate(),
+            ),
             *args, **kwargs
         )
+        self._blog_post = blog_post
+    
+    def get_sys(self):
+        template_data=self._blog_post.extract_metadata()
+        super().get_sys(template_data=template_data)

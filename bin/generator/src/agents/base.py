@@ -1,4 +1,5 @@
 from app.history import History
+from prompts import PromptTemplate
 import ollama
 
 class BaseAgent():
@@ -7,7 +8,7 @@ class BaseAgent():
 
     def __init__(
         self, 
-        system_prompt: str,
+        system_prompt: str|PromptTemplate,
         model: str = 'llama3.1',
         username: str = "User",
         options: dict = None,
@@ -45,6 +46,12 @@ class BaseAgent():
                 return False
             else:
                 return True
+            
+    def get_sys(self, *args, **kwargs):
+        if isinstance(self._system_prompt, PromptTemplate):
+            return self._system_prompt.generate(*args, **kwargs)
+        else:
+            return self._system_prompt
     
     def chat(self, prompt: str|None) -> str:
         if prompt is not None:
@@ -54,7 +61,7 @@ class BaseAgent():
 
         args = {
             "model": self._model, 
-            "messages": self._history.get_with_sys(self._system_prompt),
+            "messages": self._history.get_with_sys(self.get_sys()),
         }
         # add options if available in subclass
         if self._options:

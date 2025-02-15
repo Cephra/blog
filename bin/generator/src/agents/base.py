@@ -4,8 +4,10 @@ import ollama
 
 class BaseAgent():
     def __str__(self):
-        return str(self.get_sys())
-        return str(self._history)
+        return str([
+            str(self.get_sys()),
+            str(self._history)
+        ])
 
     def __init__(
         self, 
@@ -23,14 +25,15 @@ class BaseAgent():
         self._options = {} if options is None else options 
         self.tools = []
     
-    def _handle_tools(self, response):
-        for tool in response.message.tool_calls:
+    def _handle_tools(self, tool_calls: list):
+        for tool in tool_calls:
             result = None
             if hasattr(self, tool.function.name):
                 tool_callable = getattr(self, tool.function.name)
                 if callable(tool_callable):
                     args = tool.function.arguments
                     result = tool_callable(**args)
+            # todo when tool call is empty, do we need to log the result? 
             self._history.push_tool(tool.function.name, result or "")
             
     def _validate_message(self, message, tool_message) -> bool:
@@ -80,7 +83,7 @@ class BaseAgent():
         self._history.push_message_obj(message.model_dump())
         
         if prompt is not None and response.message.tool_calls:
-            self._handle_tools(response)
+            self._handle_tools(response.message.tool_calls)
             return self.chat(None)
 
         return message

@@ -1,5 +1,5 @@
 Data about the blog post:
-Blog post title (must NOT be included in output): {{ blog_post_title }}
-Blog post date (just for reference): {{ blog_post_date }}
+Blog post title (should not be included in the final output, can be referenced for contextual understanding): {{ blog_post_title }}
+Blog post date (just for reference, contextual understanding): {{ blog_post_date }}
 Blog post content (must be included in or processed for output):
 {{ blog_post_content }}

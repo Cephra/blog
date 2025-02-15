@@ -4,6 +4,7 @@ import ollama
 
 class BaseAgent():
     def __str__(self):
+        return str(self.get_sys())
         return str(self._history)
 
     def __init__(

@@ -23,7 +23,11 @@ class CmdAgent(BaseAgent):
             print("you must provide a post name")
         base_post = BlogPost(args[0])
         self._last_response = ContinueAgent(blog_post=base_post, model=self._model).chat(arg)["content"]
-        
+
+    def get_sys(self):
+        template_data=self._interface._blog_post.extract_metadata()
+        return super().get_sys(template_data=template_data)
+
     def __init__(self, interface):
         super().__init__(PromptTemplate(prompt_file_name='cmd'), options={
             'num_ctx': 8*1024,

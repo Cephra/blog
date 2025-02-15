@@ -14,4 +14,4 @@ class ExtendAgent(BaseAgent):
     
     def get_sys(self):
         template_data=self._blog_post.extract_metadata()
-        super().get_sys(template_data=template_data)
+        return super().get_sys(template_data=template_data)

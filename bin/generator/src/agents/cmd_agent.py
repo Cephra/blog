@@ -3,14 +3,38 @@ from prompts import PromptTemplate
 
 class CmdAgent(BaseAgent):
     def create_post(self, instructions: str) -> str:
+        """
+        Create a new blog post according to instructions.
+        
+        Args:
+          instructions: All instructions provided by the user.
+          
+        Returns:
+          str: A success message with the contents of the newly created post.
+        """
         post = self._interface._last_response = BlogAgent(username="Postcreator").chat(instructions)["content"]
         return f'Successfully generated a new post with the following content:\n{post}\n'
 
     def edit_post(self, instructions: str) -> str:
+        """
+        Edit the blog post according to instructions.
+        
+        Args:
+          instructions: All instructions provided by the user.
+          
+        Returns:
+          str: A success message with the contents of the edited post.
+        """
         post = self._interface._last_response = ExtendAgent(self._interface._blog_post, username="Posteditor").chat(instructions)["content"]
         return f'Successfully edited the post and it now looks like:\n{post}\n'
     
     def summarize_post(self) -> str:
+        """
+        Create and add a summary to the blog post's metadata.
+        
+        Returns:
+          str: A success message with the summary of the post.
+        """
         summary = SummaryAgent().chat(self._interface._blog_post.join_content())["content"]
         self._interface._blog_post.update_summary(summary)
         return f'Successfully summarized the post and the summary is:\n{summary}\n'
@@ -35,46 +59,7 @@ class CmdAgent(BaseAgent):
         self._quiet = True
         self._interface = interface
         self.tools = [
-            {
-                'type': 'function',
-                'function': {
-                    'name': 'create_post',
-                    'description': 'Create a new blog post according to instructions',
-                    'parameters': {
-                        'type': 'object',
-                        'required': ['instructions'],
-                        'properties': {
-                            'instructions': {
-                                'type': 'string',
-                                'description': 'Instructions to create the post with'
-                            },
-                        },
-                    },
-                },
-            }, {
-                'type': 'function',
-                'function': {
-                    'name': 'edit_post',
-                    'description': 'Edit the blog post according to instructions',
-                    'parameters': {
-                        'type': 'object',
-                        'required': ['instructions'],
-                        'properties': {
-                            'instructions': {
-                                'type': 'string',
-                                'description': 'Instructions to edit the post with'
-                            },
-                        },
-                    },
-                },
-            }, {
-                'type': 'function',
-                'function': {
-                    'name': 'summarize_post',
-                    'description': 'Create a summary of the blog post',
-                    'parameters': {
-                        'type': 'object',
-                    },
-                },
-            }
+            self.create_post,
+            self.edit_post,
+            self.summarize_post,
         ]

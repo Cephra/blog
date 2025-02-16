@@ -41,7 +41,7 @@ class BaseAgent():
             return True if len(message.content) > 0 else False
         else:
             if message.tool_calls:
-                available_tools = [tool["function"]["name"] for tool in self.tools]
+                available_tools = [tool.__name__ for tool in self.tools]
                 for call in message.tool_calls:
                     if call.function.name not in available_tools:
                         return False

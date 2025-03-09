@@ -7,7 +7,7 @@ class CmdAgent(BaseAgent):
         Create a new blog post according to instructions.
         
         Args:
-          instructions: All instructions provided by the user.
+          instructions: All instructions provided by the user. May include newline characters.
           
         Returns:
           str: A success message with the contents of the newly created post.
@@ -20,7 +20,7 @@ class CmdAgent(BaseAgent):
         Edit the blog post according to instructions.
         
         Args:
-          instructions: All instructions provided by the user.
+          instructions: All instructions provided by the user. May include newline characters.
           
         Returns:
           str: A success message with the contents of the edited post.
@@ -30,7 +30,7 @@ class CmdAgent(BaseAgent):
     
     def summarize_post(self) -> str:
         """
-        Create and add a summary to the blog post's metadata.
+        Create or update the summary of the blog post and add it to its metadata.
         
         Returns:
           str: A success message with the summary of the post.

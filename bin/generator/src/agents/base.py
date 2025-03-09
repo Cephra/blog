@@ -6,6 +6,7 @@ class BaseAgent():
     def __str__(self):
         return str([
             str(self.get_sys()),
+            str(self.tools),
             str(self._history)
         ])
 

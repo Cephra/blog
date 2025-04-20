@@ -5,7 +5,7 @@ tar -C /usr/local -xzf "go1.22.2.linux-amd64.tar.gz"
 EOF
 
 FROM alpine AS hugo
-ARG HUGO_VERSION="0.142.0"
+ARG HUGO_VERSION="0.145.0"
 RUN <<EOF
 wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz"
 tar xf "hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz"

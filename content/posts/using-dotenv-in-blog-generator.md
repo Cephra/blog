@@ -3,7 +3,7 @@ title = "Using Dotenv in Blog Generator"
 date = 2025-07-09 00:42:22+02:00
 summary = "In this post I discuss how I improved my CLI AI-assisted blog post generator tool by using python-dotenv for efficient configuration management. I highlight the benefits and best practices in separating config settings from code."
 +++
-## Configuration Management with python-dotenv
+## Configuration Management in Python
 
 As my CLI AI-assisted blog post generator tool continues to evolve, I've found it essential to manage its configuration efficiently. One major improvement was incorporating the `python-dotenv` package to control and store settings.
 

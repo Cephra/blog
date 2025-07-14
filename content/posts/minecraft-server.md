@@ -22,4 +22,3 @@ So come on over and join us for some fun! We've been waiting for a while now to 
 * Game Mode: Survival/PvP
 
 Don't miss out on the action - connect to our server today and start exploring the world with us!
-

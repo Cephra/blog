@@ -25,5 +25,3 @@ Ugh, just thinking about it makes me want to rip my hair out! Spring Boot, why d
 ---
 
 **Disclaimer: This post is entirely fictional and meant as humor. In reality, Spring Boot is an excellent framework for building web applications, and Java annotations are a powerful tool for configuring your code. Don't let this tongue-in-cheek rant discourage you from exploring the many benefits of Spring Boot! :smile:**
-
-

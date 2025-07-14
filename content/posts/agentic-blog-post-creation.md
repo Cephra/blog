@@ -19,6 +19,6 @@ In this post, you're reading the output of the very tool I've built. As I write,
 
 ### Conclusion
 
-Building an agentic AI framework has been a fascinating journey that combines creative problem-solving with the power of machine learning. The resulting system allows me to collaborate with a bot in a terminal, generating high-quality content that meets my writing needs. In this post, you've seen firsthand the power of agentic AI in action – and I'm not done yet! Future updates will include new features such as enhanced web search capabilities, advanced formatting options, and more precise editing tools to further streamline the collaborative writing experience.
+Building an agentic AI framework has been a fascinating journey that combines creative problem-solving with the power of machine learning. The resulting system allows me to collaborate with a bot in a terminal, generating high-quality content that meets my writing needs. In this post, you've seen firsthand the power of agentic AI in action - and I'm not done yet! Future updates will include new features such as enhanced web search capabilities, advanced formatting options, and more precise editing tools to further streamline the collaborative writing experience.
 
 Stay tuned for updates on its development! :rocket:

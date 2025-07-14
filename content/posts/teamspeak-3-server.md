@@ -15,4 +15,4 @@ Once you're in, we can chat about our lives, make plans, or just shoot the breez
 
 If you want to get an idea of who's already online, you can check out the status page at https://ts.0x29a.me/. It shows us in real-time.
 
-No big announcements needed – I just thought it'd be cool to spread the word that our server is live and ready for action.
+No big announcements needed - I just thought it'd be cool to spread the word that our server is live and ready for action.

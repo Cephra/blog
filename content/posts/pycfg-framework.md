@@ -5,7 +5,7 @@ summary = "I talk about my old hobbyist project pycfg, a Pythonic framework for 
 +++
 ## Pycfg: A Pythonic Approach to Half-Life 2 Deathmatch Scripting
 
-As I reflect on my experiences with scripting Half-Life 2 Deathmatch, a project that predates my professional career stands out – pycfg, a humble framework I created as a hobbyist to simplify the process of crafting complex scripts for HL2DM. Developed over **10 years ago**, pycfg was a testament to my early fascination with game development and the power of Python.
+As I reflect on my experiences with scripting Half-Life 2 Deathmatch, a project that predates my professional career stands out - pycfg, a humble framework I created as a hobbyist to simplify the process of crafting complex scripts for HL2DM. Developed over **10 years ago**, pycfg was a testament to my early fascination with game development and the power of Python.
 
 If you are new to Half-Life 2 Deathmatch scripting I encourage you to read my previous post: [Half-Life 2 Deathmatch Scripting](/posts/hl2dm-scripting)
 
@@ -45,4 +45,3 @@ Pycfg remains a nostalgic reminder of my early days as a hobbyist developer. It 
 ### Resources
 
 For those interested in exploring pycfg further, I invite you to visit its GitHub project page: https://github.com/Cephra/pycfg
-

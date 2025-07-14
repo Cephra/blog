@@ -25,4 +25,3 @@ This simple code demonstrates the ease of use and expressiveness of Rust. It's c
 I'm eager to delve deeper into the intricacies of Rust and explore its capabilities further. I'll make sure to keep you updated on my progress and share my experiences in future posts.
 
 Thank you for your time and interest. :smile:
-

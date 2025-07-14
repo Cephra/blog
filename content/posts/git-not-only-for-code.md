@@ -25,4 +25,4 @@ A research team is working on a project involving data collection and analysis. 
 
 ## Unlocking Git's Full Potential
 
-By expanding your use of git beyond code, you can unlock its full potential for managing various types of projects and files. Don't limit yourself – explore the world of git and discover how it can streamline your workflows, improve collaboration, and reduce errors in areas that go beyond traditional software development.
+By expanding your use of git beyond code, you can unlock its full potential for managing various types of projects and files. Don't limit yourself - explore the world of git and discover how it can streamline your workflows, improve collaboration, and reduce errors in areas that go beyond traditional software development.

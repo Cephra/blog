@@ -32,4 +32,3 @@ While a dual boot setup with Windows is technically possible, it's an inconvenie
 ### A Legacy Frozen in Time
 
 As a final note, it's worth mentioning that many GTA Online players on Linux had developed strong bonds within their communities, shared countless hours of gameplay experiences, and created lasting memories together. These moments will now forever be frozen in time as the Linux version of GTA Online becomes just another relic of the past.
-

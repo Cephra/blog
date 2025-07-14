@@ -1,6 +1,7 @@
 +++
 title = "HOTAS for Elite: Dangerous"
 date = 2025-07-15 00:34:32+02:00
+summary = "In this post I talk about how switching to a HOTAS setup in Elite: Dangerous transformed my gameplay experience with improved control and immersion. It allowed me to execute complex maneuvers with ease and precision, enhancing my overall engagement and enjoyment of the game."
 +++
 ## My Elite: Dangerous Experience Transformed with HOTAS
 ### From Limited Possibilities to Unbridled Control
@@ -20,3 +21,4 @@ The upgrade from an Xbox controller has brought a new level of engagement and en
 As someone who's experienced firsthand the benefits of HOTAS, I'm excited to explore even more complex setups in the future. With the ever-evolving landscape of gaming peripherals and software, I look forward to seeing what other innovations will become available.
 
 Whether you're a seasoned Elite: Dangerous player or just starting out, I encourage you to consider the potential benefits of upgrading to a HOTAS setup. The possibilities are endless, and I'm confident that it will revolutionize your gameplay experience as much as it has mine.
+

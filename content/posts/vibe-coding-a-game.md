@@ -1,6 +1,7 @@
 +++
 title = "Vibe Coding a Game"
 date = 2025-07-13 19:53:22+02:00
+summary = "I created a 2D top scrolling space game called Galactic Skirmish using vibe coding, refining its mechanics through several iterations with ChatGPT and Phaser."
 +++
 ## My Vibe Coding Adventure: Creating a 2D Top Scrolling Space Game
 ### Introduction
@@ -25,3 +26,7 @@ My experience with vibe coding has been a game-changer (pun intended). It's an e
 
 Check out the full source code of Galactic Skirmish on GitHub: \
 <https://github.com/Cephra/dummypage/tree/main/src/game>
+
+
+
+

@@ -1,4 +1,5 @@
 import cmd
+import sys
 from app.blog_post import BlogPost
 from agents import *
 
@@ -40,8 +41,12 @@ class BlogGenerationInterface(cmd.Cmd):
         if line == 'EOF':
             return self.do_bye('')
         else:
-            cmd_res = self._cmd_agent.chat(line)
-            print(f'Assistant: {cmd_res.content}')
+            try:
+                cmd_res = self._cmd_agent.chat(line)
+                print(f'Assistant: {cmd_res.content}')
+            except ConnectionError:
+                print('There was a problem talking to ollama. Exiting...', file=sys.stderr)
+                sys.exit(1)
     
 if __name__ == '__main__':
     BlogGenerationInterface().cmdloop()

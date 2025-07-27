@@ -1,24 +1,23 @@
 +++
 title = "Further Improving Deploy Process"
 date = 2025-07-27 14:05:48+02:00
-draft = true
+summary = "In this post I talk about a new version of my deploy script, v3, which includes improvements for handling edge cases and enhanced error handling."
 +++
-## Latest Deploy Script Update
-### v3 Released
+## Latest Deploy Script Update v3 Released
 
 The newest deploy script update (v3) has been released, introducing a more streamlined and efficient process for deploying applications to production.
 
-This version includes several key improvements over its predecessor, making it easier to get an application up and running on the servers. The changes are focused on better handling of edge cases, particularly when dealing with temporary directories and error scenarios.
+This version includes several key improvements over its predecessor, making it easier for me to get an application up and running on my server. The changes are focused on better handling of edge cases, particularly when dealing with temporary directories and error scenarios.
 
-### Notable Improvements
+### Enhancements
 
-The most significant enhancement is the improved logic for creating a temporary directory (`deploy_dir`). Instead of relying solely on `mktemp`, I'm now using a more reliable method to create a unique directory within the user's home folder. This should help mitigate potential issues related to temp file creation.
+The most significant enhancement is the improved logic for creating a temporary directory (`deploy_dir`). Instead of relying solely on `mktemp`, or a custom logic, I'm now using a more reliable method to create a unique directory within the user's home folder. This should help mitigate potential issues related to temp file creation.
 
 Another notable change is the enhanced error handling throughout the script. I've added more explicit checks for failure conditions, ensuring that if something goes wrong during deployment, the script will correctly identify and report the issue.
 
 The `trap` statement has been added, which guarantees that the `cleanup` function will be executed in case of an unexpected exit (e.g., due to a signal or error). This ensures that the temporary directory is always properly cleaned up, preventing potential clutter on the system. Furthermore, I've implemented additional validation for the input arguments and environment variables.
 
-### Code
+### Code Example
 
 Below is the updated script:
 
@@ -58,3 +57,7 @@ fi
 
 ./deploy.sh
 ```
+
+## Repository Link
+The repository with the deploy script and all related files is available on GitHub at https://github.com/Cephra/deployer.
+

@@ -7,7 +7,7 @@ summary = "In this post I talk about a new version of my deploy script, v3, whic
 
 The newest deploy script update (v3) has been released, introducing a more streamlined and efficient process for deploying applications to production.
 
-This version includes several key improvements over its predecessor, making it easier for me to get an application up and running on my server. The changes are focused on better handling of edge cases, particularly when dealing with temporary directories and error scenarios.
+This version includes several key improvements over its [predecessor](/posts/further-improvements-auto-deploy), making it easier for me to get an application up and running on my server. The changes are focused on better handling of edge cases, particularly when dealing with temporary directories and error scenarios.
 
 ### Enhancements
 
@@ -59,5 +59,6 @@ fi
 ```
 
 ## Repository Link
-The repository with the deploy script and all related files is available on GitHub at https://github.com/Cephra/deployer.
+The repository with the deploy script and all related files is available on GitHub at: \
+https://github.com/Cephra/deployer.
 

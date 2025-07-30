@@ -61,3 +61,5 @@ fi
 ## Repository Link
 The repository with the deploy script and all related files is available on GitHub at: \
 https://github.com/Cephra/deployer
+
+*just a test*

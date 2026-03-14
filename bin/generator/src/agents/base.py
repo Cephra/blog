@@ -1,3 +1,5 @@
+"""Shared Ollama agent base class with prompt, tool, and history handling."""
+
 from app.history import History
 from prompts import PromptTemplate
 import ollama
@@ -11,7 +13,7 @@ class BaseAgent():
         ])
 
     def __init__(
-        self, 
+        self,
         system_prompt: str|PromptTemplate,
         model: str = 'llama3.1',
         username: str = "User",
@@ -25,7 +27,7 @@ class BaseAgent():
         self._history = History() if history is None else history
         self._options = {} if options is None else options 
         self.tools = []
-    
+
     def _handle_tools(self, tool_calls: list):
         for tool in tool_calls:
             result = None
@@ -36,32 +38,33 @@ class BaseAgent():
                     result = tool_callable(**args)
             # todo when tool call is empty, do we need to log the result? 
             self._history.push_tool(tool.function.name, result or "")
-            
+
     def _validate_message(self, message, tool_message) -> bool:
         if tool_message:
             return True if len(message.content) > 0 else False
-        else:
-            if message.tool_calls:
-                available_tools = [tool.__name__ for tool in self.tools]
-                for call in message.tool_calls:
-                    if call.function.name not in available_tools:
-                        return False
-                return True
-            elif len(message.content) == 0:
-                return False
-            else:
-                return True
-            
+
+        if message.tool_calls:
+            available_tools = [tool.__name__ for tool in self.tools]
+            for call in message.tool_calls:
+                if call.function.name not in available_tools:
+                    return False
+            return True
+
+        if len(message.content) == 0:
+            return False
+
+        return True
+
     def get_sys(self, *args, **kwargs):
         if isinstance(self._system_prompt, PromptTemplate):
             return self._system_prompt.generate(*args, **kwargs)
-        else:
-            return self._system_prompt
-    
+
+        return self._system_prompt
+
     def chat(self, prompt: str|None) -> str:
         if prompt is not None:
             if not self._quiet:
-                print("{}: {}".format(self._username, prompt))
+                print(f"{self._username}: {prompt}")
             self._history.push_message("user", prompt)
 
         args = {
@@ -74,7 +77,7 @@ class BaseAgent():
         # add tools if available in subclass
         if self.tools:
             args["tools"] = self.tools
-            
+
         message = None
         message_valid = False
         while not message_valid:
@@ -82,7 +85,7 @@ class BaseAgent():
             message = response.message
             message_valid = self._validate_message(message, True if not prompt else False)
         self._history.push_message_obj(message.model_dump())
-        
+
         if prompt is not None and response.message.tool_calls:
             self._handle_tools(response.message.tool_calls)
             return self.chat(None)

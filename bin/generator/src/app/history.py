@@ -1,3 +1,5 @@
+"""Conversation history storage for Ollama agent interactions."""
+
 class History():
     def __init__(self):
         self._history: list = []

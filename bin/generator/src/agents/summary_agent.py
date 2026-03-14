@@ -1,3 +1,5 @@
+"""Agent for producing a short first-person summary of a post."""
+
 from . import BaseAgent
 from prompts import PromptTemplate
 

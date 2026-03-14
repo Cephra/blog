@@ -1,3 +1,5 @@
+"""Agent for revising an existing blog post."""
+
 from . import BaseAgent
 from app.blog_post import BlogPost
 from prompts import PromptTemplate

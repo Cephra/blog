@@ -1,3 +1,5 @@
+"""Prompt template loading and rendering utilities."""
+
 from datetime import date
 
 from jinja2 import Environment, FileSystemLoader
@@ -11,7 +13,7 @@ class PromptTemplate():
     def __init__(self, prompt_file_name: str):
         self._template = template_env.get_template("{}.txt".format(prompt_file_name))
         self._debug = False
-    
+
     def generate(self, template_data: dict = None):
         template_data = {} if template_data is None else template_data
         template_data["date"] = date.today().strftime("%A %B %d, %Y")

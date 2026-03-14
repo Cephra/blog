@@ -1,3 +1,5 @@
+"""Shared configuration values for the generator app."""
+
 import os
 from dotenv import load_dotenv
 

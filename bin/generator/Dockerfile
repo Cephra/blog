@@ -47,5 +47,4 @@ COPY --from=hugo /usr/bin/hugo /usr/bin/hugo
 
 ENV PATH="/opt/venv/bin:$PATH:/usr/local/go/bin"
 
-# Run command when container starts
-RUN ["python"]
+CMD ["python"]

@@ -41,6 +41,25 @@ This program requires:
 1. Python 3.x
 2. The `argparse` module
 3. The `ollama` library 
+4. `hugo` when running the generator outside Docker
+
+**Local Python Workflow**
+
+If you want to work on the generator without Docker, there is now a small local workflow in [bin/generator/Makefile](/home/szt/coding/blog/bin/generator/Makefile):
+
+```bash
+cd bin/generator
+make install
+make check
+make run POST=my-new-post
+make run POST=my-new-post MODEL=llama3.1
+```
+
+The local workflow assumes:
+
+1. `python3` is available
+2. `ollama` is running locally
+3. `hugo` is installed locally
 
 **Screenshots**
 

@@ -1,7 +1,6 @@
 services:
   app:
-    # this might be different on your system
-    user: 1000:1000
+    user: ${UID:-1000}:${GID:-1000}
     build:
       context: .
     volumes:
@@ -10,4 +9,3 @@ services:
       - /opt/venv
       - $HOME/.vscode-oss:$HOME/.vscode-oss
     network_mode: host
-    command: python test.py

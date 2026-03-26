@@ -2,6 +2,7 @@
 
 from . import BaseAgent
 from app.blog_post import BlogPost
+from app.retrieval import format_related_posts_context
 from prompts import PromptTemplate
 
 class ExtendAgent(BaseAgent):
@@ -14,6 +15,11 @@ class ExtendAgent(BaseAgent):
         )
         self._blog_post = blog_post
     
-    def get_sys(self):
+    def get_sys(self, prompt: str = None):
         template_data=self._blog_post.extract_metadata()
+        if prompt:
+            template_data["related_posts_context"] = format_related_posts_context(
+                prompt,
+                current_post_slug=self._blog_post.slug,
+            )
         return super().get_sys(template_data=template_data)

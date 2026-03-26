@@ -7,6 +7,14 @@ extending or reworking blog posts in Markdown based on instructions
 {% block body %}
 {% include "shared-body.txt" %}
 
+{% if related_posts_context %}
+Relevant context from earlier blog posts:
+{{ related_posts_context }}
+
+Use this context to keep continuity and avoid repeating yourself.
+Do not copy wording verbatim from older posts.
+{% endif %}
+
 {% include "blog-post.txt" %}
 
 {% endblock %}

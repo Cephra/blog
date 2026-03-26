@@ -6,4 +6,12 @@ writing blog posts in Markdown based on instructions
 
 {% block body %}
 {% include "shared-body.txt" %}
+{% if related_posts_context %}
+
+Relevant context from earlier blog posts:
+{{ related_posts_context }}
+
+Use this context to keep continuity, avoid repeating the same ideas, and reference prior work when helpful.
+Do not copy wording verbatim from older posts.
+{% endif %}
 {% endblock %}

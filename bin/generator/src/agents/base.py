@@ -69,7 +69,7 @@ class BaseAgent():
 
         args = {
             "model": self._model, 
-            "messages": self._history.get_with_sys(self.get_sys()),
+            "messages": self._history.get_with_sys(self.get_sys(prompt=prompt)),
         }
         # add options if available in subclass
         if self._options:

@@ -63,6 +63,10 @@ class BlogPost():
     def _get_front_matter_var(self, key: str):
         return self._front_matter[key]
 
+    @property
+    def slug(self) -> str:
+        return self._postname
+
     def extract_metadata(self) -> dict:
         return {
             "blog_post_content": self.join_content(),
